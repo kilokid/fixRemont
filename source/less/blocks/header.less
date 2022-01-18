@@ -1,0 +1,35 @@
+@import "../variables.less";
+
+html > body > header
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	max-width: 1750px;
+	margin: 0 auto;
+	padding-top: 48px;
+}
+
+html > body > header > span a
+{
+	display: flex;
+	align-items: center;
+
+	font-size: 21px;
+	font-weight: 400;
+
+	color: @black;
+}
+
+html > body > header > span a::before
+{
+	width: 25px;
+	height: 30px;
+	margin-right: 10px;
+
+	content: "";
+
+	background-image: url("../../img/phone.svg");
+	background-repeat: no-repeat;
+}
