@@ -1,17 +1,16 @@
 @import "../variables.less";
 
-html > body > header
+html > body > header > .container
 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
-	max-width: 1750px;
-	margin: 0 auto;
+	padding: 0 50px;
 	padding-top: 48px;
 }
 
-html > body > header > span a
+html > body > header > div > span a
 {
 	display: flex;
 	align-items: center;
@@ -22,7 +21,7 @@ html > body > header > span a
 	color: @black;
 }
 
-html > body > header > span a::before
+html > body > header > div > span a::before
 {
 	width: 25px;
 	height: 30px;
@@ -32,4 +31,9 @@ html > body > header > span a::before
 
 	background-image: url("../../img/phone.svg");
 	background-repeat: no-repeat;
+}
+
+html > body > header > div > span a:hover
+{
+	color: @orange;
 }
