@@ -1,0 +1,70 @@
+@import "../variables.less";
+
+html > body > main > article.slider
+{
+	position: relative;
+
+	font-weight: 500;
+}
+
+html > body > main > article.slider > div > h2
+{
+	margin: 0;
+	margin-bottom: 10px;
+
+	font-size: 40px;
+}
+
+html > body > main > article.slider > div > p
+{
+	margin: 0;
+
+	font-size: 16px;
+
+	color: @light-green;
+}
+
+html > body > main > article.slider > .slider-content
+{
+	display: flex;
+	// gap: 150px;
+	overflow: hidden;
+
+	margin: 0;
+	padding: 0;
+	padding-top: 50px;
+
+	list-style-type: none;
+}
+
+html > body > main > article.slider > .slider-content img
+{
+	width: 700px;
+	height: 500px;
+
+	opacity: 0.6;
+}
+
+html > body > main > article.slider > .slider-arrows
+{
+	position: absolute;
+	right: 20%;
+	bottom: 0;
+
+	display: flex;
+	gap: 32px;
+}
+
+html > body > main > article.slider > .slider-arrows button
+{
+	cursor: pointer;
+
+	background-color: inherit;
+
+	border: none;
+}
+
+html > body > main > article.slider > .slider-content .slider-active
+{
+	opacity: 1;
+}
