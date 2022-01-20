@@ -1,0 +1,120 @@
+@import "../variables.less";
+
+html > body > main > article.subscription > div
+{
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	border: 3px solid @emerald-green;
+}
+
+html > body > main > article.subscription h2
+{
+	position: absolute;
+	top: -55px;
+
+	padding: 0 20px;
+
+	font-size: 40px;
+	font-weight: 500;
+
+	background-color: @white;
+}
+
+html > body > main > article.subscription .subscription-description
+{
+	display: flex;
+	align-items: center;
+
+	margin-top: 55px;
+	margin-bottom: 50px;
+
+	font-size: 16px;
+	font-weight: 400;
+}
+
+html > body > main > article.subscription > div > p.subscription-description::before
+{
+	width: 46px;
+	height: 69px;
+	margin-right: 20px;
+
+	content: "";
+
+	background-image: url("../../img/door.svg");
+}
+
+html > body > main > article.subscription input
+{
+	width: 500px;
+	height: 60px;
+	padding: 18px 0 18px 25px;
+	margin-bottom: 35px;
+
+	border: 1px solid @light-gray;
+}
+
+html > body > main > article.subscription input::-moz-placeholder
+{
+	color: @gray;
+}
+
+html > body > main > article.subscription input::-webkit-input-placeholder
+{
+	color: @gray;
+}
+
+html > body > main > article.subscription input:focus
+{
+	border: 1px solid @black;
+	box-shadow: 0px 0px 10px 1px @orange-hover;
+}
+
+html > body > main > article.subscription button
+{
+	padding: 15px 75px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: -0.01px;
+
+	cursor: pointer;
+
+	color: @white;
+	background-color: @orange;
+
+	border-radius: 25px;
+	box-shadow: 0px 7px 15px rgba(249, 87, 46, 0.6);
+
+	border: none;
+}
+
+html > body > main > article.subscription button:hover
+{
+	background-color: @orange-hover;
+}
+
+html > body > main > article.subscription .subscription-necessarily,
+html > body > main > article.subscription a
+{
+	font-size: 13px;
+	font-weight: 400;
+}
+
+html > body > main > article.subscription .subscription-necessarily
+{
+	color: @gray;
+}
+
+html > body > main > article.subscription a
+{
+	margin-bottom: 60px;
+
+	color: @orange;
+}
