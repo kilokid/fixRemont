@@ -4,6 +4,11 @@ html > body > main > article.slider
 {
 	position: relative;
 
+	max-width: 1880px;
+	width: 100%;
+
+	margin: 0 auto;
+
 	font-weight: 500;
 }
 
@@ -24,31 +29,56 @@ html > body > main > article.slider > div > p
 	color: @light-green;
 }
 
-html > body > main > article.slider > .slider-content
+html > body > main > article.slider > .slider-wrapper
 {
-	display: flex;
-	// gap: 150px;
 	overflow: hidden;
 
-	margin: 0;
-	padding: 0;
 	padding-top: 50px;
+	width: 100%;
 
-	list-style-type: none;
+	font-size: 13px;
+
+	color: @gray;
 }
 
-html > body > main > article.slider > .slider-content img
+html > body > main > article.slider > .slider-wrapper > .slider-content
+{
+	display: flex;
+
+	width: 150%;
+
+	transition: 0.2s;
+}
+
+html > body > main > article.slider > .slider-wrapper > .slider-content .slide
+{
+	display: flex;
+
+	opacity: 0.6;
+}
+
+html > body > main > article.slider > .slider-wrapper > .slider-content .slide:first-child
+{
+	margin-left: -450px;
+}
+
+html > body > main > article.slider > .slider-wrapper > .slider-content .slide > img
 {
 	width: 700px;
 	height: 500px;
+}
 
-	opacity: 0.6;
+html > body > main > article.slider > .slider-wrapper > .slider-content > .slide > p
+{
+	margin-top: 0;
+	margin-left: 20px;
+	width: 145px;
 }
 
 html > body > main > article.slider > .slider-arrows
 {
 	position: absolute;
-	right: 20%;
+	right: calc(100% - 1265px);
 	bottom: 0;
 
 	display: flex;
@@ -64,7 +94,10 @@ html > body > main > article.slider > .slider-arrows button
 	border: none;
 }
 
-html > body > main > article.slider > .slider-content .slider-active
+html > body > main > article.slider > .slider-wrapper > .slider-content .active
 {
+	margin-right: 70px;
+	margin-left: 150px;
+
 	opacity: 1;
 }
