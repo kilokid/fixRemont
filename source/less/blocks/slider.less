@@ -32,9 +32,9 @@ html > body > main > article.slider > div > p
 html > body > main > article.slider > .slider-wrapper
 {
 	overflow: hidden;
+	margin-left: -450px;
 
 	padding-top: 50px;
-	width: 100%;
 
 	font-size: 13px;
 
@@ -45,22 +45,18 @@ html > body > main > article.slider > .slider-wrapper > .slider-content
 {
 	display: flex;
 
-	width: 150%;
-
-	transition: 0.2s;
+	transition: 0.4s all;
 }
 
 html > body > main > article.slider > .slider-wrapper > .slider-content .slide
 {
 	display: flex;
 
+	max-width: 880px;
+
 	opacity: 0.6;
 }
 
-html > body > main > article.slider > .slider-wrapper > .slider-content .slide:first-child
-{
-	margin-left: -450px;
-}
 
 html > body > main > article.slider > .slider-wrapper > .slider-content .slide > img
 {
@@ -68,24 +64,33 @@ html > body > main > article.slider > .slider-wrapper > .slider-content .slide >
 	height: 500px;
 }
 
-html > body > main > article.slider > .slider-wrapper > .slider-content > .slide > p
+html > body > main > article.slider > .slider-wrapper > .slider-content > .slide > p.slide-description
 {
+	display: none;
+
 	margin-top: 0;
 	margin-left: 20px;
 	width: 145px;
 }
 
-html > body > main > article.slider > .slider-arrows
+html > body > main > article.slider > .slider-wrapper > .slider-content > .slide > p.slide-description-active
+{
+	position: relative;
+
+	display: block;
+}
+
+html > body > main > article.slider > .slider-wrapper > .slider-arrows
 {
 	position: absolute;
-	right: calc(100% - 1265px);
+	right: 32%;
 	bottom: 0;
 
 	display: flex;
 	gap: 32px;
 }
 
-html > body > main > article.slider > .slider-arrows button
+html > body > main > article.slider > .slider-wrapper > .slider-arrows button
 {
 	cursor: pointer;
 
@@ -94,10 +99,20 @@ html > body > main > article.slider > .slider-arrows button
 	border: none;
 }
 
-html > body > main > article.slider > .slider-wrapper > .slider-content .active
+html > body > main > article.slider > .slider-wrapper > .slider-content .slide-active
 {
+	position: relative;
+
 	margin-right: 70px;
-	margin-left: 150px;
+	margin-left: -40px;
 
 	opacity: 1;
+}
+
+@media (max-width: 1879px)
+{
+	html > body > main > article.slider > .slider-wrapper > .slider-arrows
+	{
+		right: 17%;
+	}
 }
