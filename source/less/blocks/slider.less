@@ -1,0 +1,118 @@
+@import "../variables.less";
+
+html > body > main > article.slider
+{
+	position: relative;
+
+	max-width: 1880px;
+	width: 100%;
+
+	margin: 0 auto;
+
+	font-weight: 500;
+}
+
+html > body > main > article.slider > div > h2
+{
+	margin: 0;
+	margin-bottom: 10px;
+
+	font-size: 40px;
+}
+
+html > body > main > article.slider > div > p
+{
+	margin: 0;
+
+	font-size: 16px;
+
+	color: @light-green;
+}
+
+html > body > main > article.slider > .slider-wrapper
+{
+	overflow: hidden;
+	margin-left: -450px;
+
+	padding-top: 50px;
+
+	font-size: 13px;
+
+	color: @gray;
+}
+
+html > body > main > article.slider > .slider-wrapper > .slider-content
+{
+	display: flex;
+
+	transition: 0.4s all;
+}
+
+html > body > main > article.slider > .slider-wrapper > .slider-content .slide
+{
+	display: flex;
+
+	max-width: 880px;
+
+	opacity: 0.6;
+}
+
+
+html > body > main > article.slider > .slider-wrapper > .slider-content .slide > img
+{
+	width: 700px;
+	height: 500px;
+}
+
+html > body > main > article.slider > .slider-wrapper > .slider-content > .slide > p.slide-description
+{
+	display: none;
+
+	margin-top: 0;
+	margin-left: 20px;
+	width: 145px;
+}
+
+html > body > main > article.slider > .slider-wrapper > .slider-content > .slide > p.slide-description-active
+{
+	position: relative;
+
+	display: block;
+}
+
+html > body > main > article.slider > .slider-wrapper > .slider-arrows
+{
+	position: absolute;
+	right: 32%;
+	bottom: 0;
+
+	display: flex;
+	gap: 32px;
+}
+
+html > body > main > article.slider > .slider-wrapper > .slider-arrows button
+{
+	cursor: pointer;
+
+	background-color: inherit;
+
+	border: none;
+}
+
+html > body > main > article.slider > .slider-wrapper > .slider-content .slide-active
+{
+	position: relative;
+
+	margin-right: 70px;
+	margin-left: -40px;
+
+	opacity: 1;
+}
+
+@media (max-width: 1879px)
+{
+	html > body > main > article.slider > .slider-wrapper > .slider-arrows
+	{
+		right: 17%;
+	}
+}
