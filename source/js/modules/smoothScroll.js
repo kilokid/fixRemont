@@ -1,9 +1,9 @@
 export const smoothScrool = () => {
-    const smothScrollElems = document.querySelectorAll(
+    const smoothScrollElems = document.querySelectorAll(
       'a[href^="#"]:not(a[href="#"])'
     );
 
-    smothScrollElems.forEach((link) => {
+    smoothScrollElems.forEach((link) => {
         link.addEventListener("click", (event) => {
         event.preventDefault();
         const id = link.getAttribute("href").slice(1);
