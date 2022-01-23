@@ -145,12 +145,14 @@
 				<p class="subscription-description">
 					Первым 10 клиентам стальная<br/> входная дверь в подарок
 				</p>
-				<input type="text" placeholder="Имя и фамилия*">
-				<input type="text" placeholder="E-mail адрес*">
-				<input type="text" placeholder="Телефон">
-				<button>
-					Подписаться
-				</button>
+				<form>
+					<input type="text" placeholder="Имя и фамилия*" name="name" required>
+					<input type="email" placeholder="E-mail адрес*" name="email" required>
+					<input type="tel" placeholder="Телефон" name="phone">
+					<button type="submit">
+						Подписаться
+					</button>
+				</form>
 				<p class="subscription-necessarily">
 					* Обязательные для заполнения поля
 				</p>

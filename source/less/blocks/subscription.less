@@ -65,27 +65,35 @@ html > body > main > article.subscription input
 	border: 1px solid @light-gray;
 }
 
-html > body > main > article.subscription input::-moz-placeholder
+html > body > main > article.subscription > div > form
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+html > body > main > article.subscription > div > form input::-moz-placeholder
 {
 	color: @gray;
 }
 
-html > body > main > article.subscription input::-webkit-input-placeholder
+html > body > main > article.subscription > div > form input::-webkit-input-placeholder
 {
 	color: @gray;
 }
 
-html > body > main > article.subscription input:focus
+html > body > main > article.subscription > div > form input:focus
 {
 	border: 1px solid @black;
 	box-shadow: 0px 0px 10px 1px @orange-hover;
 }
 
-html > body > main > article.subscription button
+html > body > main > article.subscription > div > form button
 {
 	padding: 15px 75px;
 	margin-top: 10px;
 	margin-bottom: 20px;
+	width: 250px;
 
 	font-size: 16px;
 	font-weight: 500;
@@ -102,7 +110,7 @@ html > body > main > article.subscription button
 	border: none;
 }
 
-html > body > main > article.subscription button:hover
+html > body > main > article.subscription > div > form button:hover
 {
 	background-color: @orange-hover;
 }
