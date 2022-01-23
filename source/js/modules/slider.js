@@ -5,15 +5,10 @@ export const slider = () =>
 	const slidesDescription = document.querySelectorAll('.slide-description');
 	const btnPrev = document.getElementById('btn-prev');
 	const btnNext = document.getElementById('btn-next');
-	let width = '880px';
+	let slideWidth = 880;
 
 	let slideIndex = 1;
 	let offset = 0;
-
-	const deleteNotDigits = ( str ) =>
-	{
-		return +str.replace(/\D/g, '');
-	}
 
 	const showSlide = ( i = 1 ) =>
 	{
@@ -27,6 +22,7 @@ export const slider = () =>
 			slideIndex = slides.length - 1;
 			i = slideIndex;
 		}
+
 
 		slides[i].classList.add('slide-active');
 
@@ -47,62 +43,25 @@ export const slider = () =>
 
 	slides.forEach( slide =>
 		{
-			slide.style.width = width;
+			slide.style.width = `${slideWidth}px`;
 		}
 	);
 
 	btnNext.addEventListener( 'click', () =>
 		{
-			if ( offset === deleteNotDigits(width) * ( slides.length - 1 ) )
-			{
-				offset = 0;
-			}
-			else
-			{
-				offset += deleteNotDigits(width);
-			}
-
 			hideSlide();
 			showSlide(++slideIndex);
-
-			if ( slideIndex === 0 ) {
-				slidesField.style.transform = `translateX(${width})`;
-			}
-			else
-			{
-				slidesField.style.transform = `translateX(-${offset}px)`;
-			}
-
-
+			offset = slideWidth * slideIndex * - 1 + slideWidth;
+			slidesField.style.transform = `translateX(${offset}px)`;
 		}
 	);
 
 	btnPrev.addEventListener( 'click', () =>
 		{
-			if ( offset === 0 )
-			{
-				offset = deleteNotDigits(width) * ( slides.length - 1)
-			}
-			else
-			{
-				offset -= deleteNotDigits(width);
-			}
-
-
 			hideSlide();
 			showSlide(--slideIndex);
-
-			if ( slideIndex === slides.length - 1 ) {
-				slidesField.style.transform = `translateX(-${offset}px)`;
-			}
-			else if ( slideIndex === 0 )
-			{
-				slidesField.style.transform = `translateX(${width})`;
-			}
-			else
-			{
-				slidesField.style.transform = `translateX(${offset}px)`;
-			}
+			offset = slideWidth * slideIndex * -1 + slideWidth;
+			slidesField.style.transform = `translateX(${offset}px)`;
 		}
 	);
 }
