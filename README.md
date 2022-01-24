@@ -1,6 +1,6 @@
 # FIX-РЕМОНТ
 
-https://github.com/kilokid/fixRemont
+https://kilokid.github.io/fixRemont/
 
 ## Как использовать
 
