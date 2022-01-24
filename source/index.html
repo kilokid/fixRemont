@@ -139,24 +139,45 @@
 		</article>
 		<article id="forms" class="subscription">
 			<div class="container-sm">
-				<h2>
-					Узнайте о запуске сервиса первым
-				</h2>
-				<p class="subscription-description">
-					Первым 10 клиентам стальная<br/> входная дверь в подарок
-				</p>
-				<input type="text" placeholder="Имя и фамилия*">
-				<input type="text" placeholder="E-mail адрес*">
-				<input type="text" placeholder="Телефон">
-				<button>
-					Подписаться
-				</button>
-				<p class="subscription-necessarily">
-					* Обязательные для заполнения поля
-				</p>
-				<a href="#">
-					Политика конфиденциальности
-				</a>
+				<section class="form">
+					<section class="successfuly">
+						<img src="./img/successfully.svg" alt="Succesfuly">
+						<p>
+							Спасибо! Мы будем держать<br/>вас в курсе обновлений
+						</p>
+					</section>
+					<h2>
+						Узнайте о запуске сервиса первым
+					</h2>
+					<section class="form-content">
+						<p class="subscription-description">
+							Первым 10 клиентам стальная<br/> входная дверь в подарок
+						</p>
+						<form>
+							<div class="form-item">
+								<input id="form-name" type="text" name="name" required>
+								<label class="form-label" for="form-name">Имя и фамилия*</label>
+							</div>
+							<div class="form-item">
+								<input id="form-email" type="email" name="email" required>
+								<label class="form-label email" for="form-email">E-mail адрес*</label>
+							</div>
+							<div class="form-item">
+								<input id="form-phone" type="tel" name="phone" required>
+								<label class="form-label" for="form-phone">Телефон</label>
+							</div>
+							<button id="btn-submit" type="submit">
+								Подписаться
+							</button>
+						</form>
+						<p class="subscription-necessarily">
+							* Обязательные для заполнения поля
+						</p>
+						<a href="#">
+							Политика конфиденциальности
+						</a>
+					</section>
+				</section>
 			</div>
 		</article>
 	</main>
