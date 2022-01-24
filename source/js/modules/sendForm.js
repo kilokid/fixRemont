@@ -63,6 +63,11 @@ export const sendForm = () =>
 			{
 				target.value = target.value.replace(/[^a-z@. ]+$/gi, '');
 			}
+
+			if ( target.closest('#form-phone') || target.placeholder === 'Телефон' )
+			{
+				target.value = target.value.replace(/\D/gi, '').substr(0,11);
+			}
 		}
 	);
 }
