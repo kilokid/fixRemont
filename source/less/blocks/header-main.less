@@ -97,11 +97,6 @@ html > body > main > div > section > a.header-scroll:hover img
 	transform: scale(0.9) scaleX(0.8);
 }
 
-html > body > main > div > section > a.header-scroll:focus img
-{
-	transform: scale(0.9) scaleX(0.8);
-}
-
 html > body > main > div > section div.header-video
 {
 	position: absolute;
@@ -129,6 +124,24 @@ html > body > main > div > section div.header-play
 	cursor: pointer;
 }
 
+html > body > main > div > section div.header-play > div.video
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 255px;
+	height: 255px;
+
+	background-image: url('../../img/oval.svg');
+	background-repeat: no-repeat;
+}
+
+html > body > main > div > section div.header-play > div.video > img
+{
+	margin-left: 20px;
+}
+
 html > body > main > div > section div.header-play p
 {
 	font-size: 21px;
@@ -145,5 +158,5 @@ html > body > main > div > section div.header-play img
 
 html > body > main > div > section div.header-play:hover img
 {
-	transform: scale(1.05);
+	transform: scale(1.10);
 }
