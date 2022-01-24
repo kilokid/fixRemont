@@ -34,9 +34,5 @@
 		"not dead",
 		"not ie <= 11"
 	],
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/kilokid/fixRemont.git"
-	},
-	"homepage": "https://github.com/fixRemont.git"
+	"homepage": "https://github.com/fixRemont/"
 }
