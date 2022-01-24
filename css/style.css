@@ -52,7 +52,7 @@ html > body > header > div > span a::before {
   height: 30px;
   margin-right: 10px;
   content: "";
-  background-image: url("../../img/phone.svg");
+  background-image: url("../img/phone.svg");
   background-repeat: no-repeat;
 }
 html > body > header > div > span a:hover {
@@ -130,14 +130,14 @@ html > body > main > div > section div.header-video {
   width: 840px;
   height: 820px;
   max-width: 100%;
-  background-image: url("../../img/video.jpg");
+  background-image: url("../img/video.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   html > body > main > div > section div.header-video {
-    background-image: url("../../img/video@2x.jpg");
+    background-image: url("../img/video@2x.jpg");
   }
 }
 html > body > main > div > section div.header-play {
@@ -152,7 +152,7 @@ html > body > main > div > section div.header-play > div.video {
   align-items: center;
   width: 255px;
   height: 255px;
-  background-image: url('../../img/oval.svg');
+  background-image: url('../img/oval.svg');
   background-repeat: no-repeat;
 }
 html > body > main > div > section div.header-play > div.video > img {
@@ -338,7 +338,7 @@ html > body > main > article.subscription > div > section.form > section.form-co
   height: 69px;
   margin-right: 20px;
   content: "";
-  background-image: url("../../img/door.svg");
+  background-image: url("../img/door.svg");
 }
 html > body > main > article.subscription > div > section.form > section.form-content input {
   width: 500px;
@@ -469,7 +469,7 @@ html > body > footer > div > section.contact .phone::before {
   width: 25px;
   height: 25px;
   content: "";
-  background-image: url("../../img/phone.svg");
+  background-image: url("../img/phone.svg");
 }
 html > body > footer > div > section.contact .address {
   display: flex;
@@ -499,7 +499,7 @@ html > body > footer > div > section.contact .mail::before {
   height: 21px;
   padding-right: 10px;
   content: "";
-  background-image: url("../../img/mail.svg");
+  background-image: url("../img/mail.svg");
 }
 html > body > footer .line {
   width: 90%;
