@@ -14,11 +14,11 @@
 ::before,
 ::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
   height: auto;
-  margin: 0;
-  padding: 0;
   font-family: "Muller", "Work sans", sans-serif;
 }
 a {
@@ -27,10 +27,6 @@ a {
 img {
   max-width: 100%;
   height: auto;
-}
-p {
-  padding: 0;
-  margin: 0;
 }
 .container {
   max-width: 1880px;
@@ -51,12 +47,23 @@ html > body > header > .container {
   align-items: center;
   padding: 0 50px;
 }
+@media (max-width: 485px) {
+  html > body > header > .container {
+    gap: 20px;
+    padding: 0 20px;
+  }
+}
 html > body > header > div > a.contacts-link {
   display: flex;
   align-items: center;
   font-size: 21px;
   font-weight: 400;
   color: #000000;
+}
+@media (max-width: 485px) {
+  html > body > header > div > a.contacts-link {
+    font-size: 18px;
+  }
 }
 html > body > header > div > a.contacts-link::before {
   width: 25px;
@@ -75,6 +82,13 @@ html > body > main > section.first-screen {
   justify-content: space-between;
   min-width: 100%;
   min-height: 100vh;
+}
+@media (max-width: 840px) {
+  html > body > main > section.first-screen {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
 }
 html > body > main > section.first-screen > .info-wrapper {
   display: flex;
@@ -95,11 +109,23 @@ html > body > main > section.first-screen > .info-wrapper > h1 {
     font-size: 44px;
   }
 }
+@media (max-width: 442px) {
+  html > body > main > section.first-screen > .info-wrapper > h1 {
+    font-size: 29px;
+    line-height: 44px;
+  }
+}
 html > body > main > section.first-screen > .info-wrapper > p {
   margin-bottom: 44px;
   font-size: 21px;
   line-height: 30px;
   letter-spacing: -0.01px;
+}
+@media (max-width: 442px) {
+  html > body > main > section.first-screen > .info-wrapper > p {
+    font-size: 18px;
+    line-height: 25px;
+  }
 }
 html > body > main > section.first-screen > .info-wrapper > .learn-start {
   margin-bottom: 20vh;
@@ -110,6 +136,18 @@ html > body > main > section.first-screen > .info-wrapper > .learn-start {
     flex-direction: column;
     align-items: start;
     gap: 15px;
+  }
+}
+@media (max-width: 840px) {
+  html > body > main > section.first-screen > .info-wrapper > .learn-start {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+  }
+}
+@media (max-width: 442px) {
+  html > body > main > section.first-screen > .info-wrapper > .learn-start {
+    margin-left: 30px;
   }
 }
 html > body > main > section.first-screen > .info-wrapper > .learn-start > a {
@@ -127,6 +165,12 @@ html > body > main > section.first-screen > .info-wrapper > .learn-start > a {
   border-radius: 25px;
   box-shadow: 0px 7px 15px rgba(249, 87, 46, 0.6);
 }
+@media (max-width: 442px) {
+  html > body > main > section.first-screen > .info-wrapper > .learn-start > a {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
 html > body > main > section.first-screen > .info-wrapper > .learn-start > a:hover {
   background-color: #ff7b59;
 }
@@ -141,6 +185,11 @@ html > body > main > section.first-screen > .info-wrapper > .learn-start > span 
     margin-left: 60px;
   }
 }
+@media (max-width: 840px) {
+  html > body > main > section.first-screen > .info-wrapper > .learn-start > span {
+    margin-left: -20px;
+  }
+}
 html > body > main > section.first-screen > .info-wrapper > .header-scroll {
   display: flex;
   align-items: center;
@@ -149,6 +198,12 @@ html > body > main > section.first-screen > .info-wrapper > .header-scroll {
   line-height: 18px;
   letter-spacing: -0.01px;
   color: #f9572e;
+}
+@media (max-width: 840px) {
+  html > body > main > section.first-screen > .info-wrapper > .header-scroll {
+    justify-content: center;
+    margin-left: -20px;
+  }
 }
 html > body > main > section.first-screen > .info-wrapper > .header-scroll img {
   transition: 1s;
@@ -172,6 +227,12 @@ html > body > main > section.first-screen > .video-wrapper {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   html > body > main > section.first-screen > .video-wrapper {
     background-image: url("../img/video@2x.jpg");
+  }
+}
+@media (max-width: 840px) {
+  html > body > main > section.first-screen > .video-wrapper {
+    width: 90%;
+    height: 350px;
   }
 }
 html > body > main > section.first-screen > .video-wrapper > button {
