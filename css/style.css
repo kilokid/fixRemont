@@ -111,8 +111,14 @@ html > body > main > section.first-screen > .info-wrapper > h1 {
 }
 @media (max-width: 442px) {
   html > body > main > section.first-screen > .info-wrapper > h1 {
-    font-size: 29px;
+    font-size: 36px;
     line-height: 44px;
+  }
+}
+@media (max-width: 376px) {
+  html > body > main > section.first-screen > .info-wrapper > h1 {
+    font-size: 28px;
+    line-height: 38px;
   }
 }
 html > body > main > section.first-screen > .info-wrapper > p {
@@ -128,7 +134,7 @@ html > body > main > section.first-screen > .info-wrapper > p {
   }
 }
 html > body > main > section.first-screen > .info-wrapper > .learn-start {
-  margin-bottom: 20vh;
+  margin-bottom: 16vw;
 }
 @media (max-width: 1065px) {
   html > body > main > section.first-screen > .info-wrapper > .learn-start {
@@ -136,6 +142,11 @@ html > body > main > section.first-screen > .info-wrapper > .learn-start {
     flex-direction: column;
     align-items: start;
     gap: 15px;
+  }
+}
+@media (max-width: 1600px) {
+  html > body > main > section.first-screen > .info-wrapper > .learn-start {
+    margin-bottom: 5vw;
   }
 }
 @media (max-width: 840px) {
@@ -167,8 +178,10 @@ html > body > main > section.first-screen > .info-wrapper > .learn-start > a {
 }
 @media (max-width: 442px) {
   html > body > main > section.first-screen > .info-wrapper > .learn-start > a {
+    width: 250px;
     padding-right: 15px;
     padding-left: 15px;
+    border-radius: 50px;
   }
 }
 html > body > main > section.first-screen > .info-wrapper > .learn-start > a:hover {
@@ -201,8 +214,7 @@ html > body > main > section.first-screen > .info-wrapper > .header-scroll {
 }
 @media (max-width: 840px) {
   html > body > main > section.first-screen > .info-wrapper > .header-scroll {
-    justify-content: center;
-    margin-left: -20px;
+    display: none;
   }
 }
 html > body > main > section.first-screen > .info-wrapper > .header-scroll img {
@@ -233,6 +245,7 @@ html > body > main > section.first-screen > .video-wrapper {
   html > body > main > section.first-screen > .video-wrapper {
     width: 90%;
     height: 350px;
+    margin-top: 0;
   }
 }
 html > body > main > section.first-screen > .video-wrapper > button {
@@ -241,13 +254,26 @@ html > body > main > section.first-screen > .video-wrapper > button {
   cursor: pointer;
   background-image: url('../img/oval.svg');
   background-repeat: no-repeat;
+  background-size: contain;
   border: none;
   background-color: inherit;
+}
+@media (max-width: 800px) {
+  html > body > main > section.first-screen > .video-wrapper > button {
+    width: 165px;
+    height: 165px;
+  }
 }
 html > body > main > section.first-screen > .video-wrapper > button > img {
   margin-top: 15px;
   margin-left: 25px;
   transition: 1s;
+}
+@media (max-width: 800px) {
+  html > body > main > section.first-screen > .video-wrapper > button > img {
+    width: 100px;
+    height: 100px;
+  }
 }
 html > body > main > section.first-screen > .video-wrapper > button:hover img {
   transform: scale(1.1);
