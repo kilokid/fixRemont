@@ -8,6 +8,21 @@ html > body > main > section.first-screen
 
 	min-width: 100%;
 	min-height: 100vh;
+
+	@media (max-width: 840px)
+	{
+		flex-direction: column;
+		justify-content: center;
+
+		padding-top: 50px;
+
+		text-align: center;
+	}
+
+	@media (max-width: 480px)
+	{
+		padding-top: 80px;
+	}
 }
 
 html > body > main > section.first-screen > .info-wrapper
@@ -33,6 +48,18 @@ html > body > main > section.first-screen > .info-wrapper > h1
 	{
 		font-size: 44px;
 	}
+
+	@media (max-width: 442px)
+	{
+		font-size: 36px;
+		line-height: 44px;
+	}
+
+	@media (max-width: 376px)
+	{
+		font-size: 28px;
+		line-height: 38px;
+	}
 }
 
 html > body > main > section.first-screen > .info-wrapper > p
@@ -42,18 +69,43 @@ html > body > main > section.first-screen > .info-wrapper > p
 	font-size: 21px;
 	line-height: 30px;
 	letter-spacing: -0.01px;
+
+	@media (max-width: 442px)
+	{
+		font-size: 18px;
+		line-height: 25px;
+	}
 }
 
 html > body > main > section.first-screen > .info-wrapper > .learn-start
 {
-	margin-bottom: 20vh;
+	margin-bottom: 16vw;
 
-	@media (max-width: 1065px)
+	@media (max-width: 1165px)
 	{
 		display: flex;
 		flex-direction: column;
 		align-items: start;
 		gap: 15px;
+	}
+
+	@media (max-width: 1600px)
+	{
+		margin-bottom: 9vw;
+	}
+
+	@media (max-width: 840px)
+	{
+		flex-direction: column;
+		align-items: center;
+
+		margin-bottom: 5vw;
+		margin-left: 30px;
+	}
+
+	@media (max-width: 442px)
+	{
+		margin-left: 30px;
 	}
 }
 
@@ -75,6 +127,15 @@ html > body > main > section.first-screen > .info-wrapper > .learn-start > a
 
 	border-radius: 25px;
 	box-shadow: 0px 7px 15px rgba(249, 87, 46, 0.6);
+
+	@media (max-width: 442px)
+	{
+		width: 250px;
+		padding-right: 15px;
+		padding-left: 15px;
+
+		border-radius: 50px;
+	}
 }
 
 html > body > main > section.first-screen > .info-wrapper > .learn-start > a:hover
@@ -90,9 +151,14 @@ html > body > main > section.first-screen > .info-wrapper > .learn-start > span
 
 	color: @gray;
 
-	@media (max-width: 1065px)
+	@media (max-width: 1165px)
 	{
 		margin-left: 60px;
+	}
+
+	@media (max-width: 840px)
+	{
+		margin-left: -20px;
 	}
 }
 
@@ -107,6 +173,11 @@ html > body > main > section.first-screen > .info-wrapper > .header-scroll
 	letter-spacing: -0.01px;
 
 	color: @orange;
+
+	@media (max-width: 840px)
+	{
+		display: none;
+	}
 }
 
 html > body > main > section.first-screen > .info-wrapper > .header-scroll img
@@ -137,6 +208,13 @@ html > body > main > section.first-screen > .video-wrapper
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+
+	@media (max-width: 840px)
+	{
+		width: 90%;
+		height: 350px;
+		margin-top: 0;
+	}
 }
 
 html > body > main > section.first-screen > .video-wrapper > button
@@ -148,9 +226,16 @@ html > body > main > section.first-screen > .video-wrapper > button
 
 	background-image: url('../img/oval.svg');
 	background-repeat: no-repeat;
+	background-size: contain;
 
 	border: none;
 	background-color: inherit;
+
+	@media (max-width: 800px)
+	{
+		width: 165px;
+		height: 165px;
+	}
 }
 
 html > body > main > section.first-screen > .video-wrapper > button > img
@@ -159,6 +244,12 @@ html > body > main > section.first-screen > .video-wrapper > button > img
 	margin-left: 25px;
 
 	transition: 1s;
+
+	@media (max-width: 800px)
+	{
+		width: 100px;
+		height: 100px;
+	}
 }
 
 html > body > main > section.first-screen > .video-wrapper > button:hover img
