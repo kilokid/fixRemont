@@ -16,6 +16,9 @@
   box-sizing: border-box;
 }
 body {
+  height: auto;
+  margin: 0;
+  padding: 0;
   font-family: "Muller", "Work sans", sans-serif;
 }
 a {
@@ -25,6 +28,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+p {
+  padding: 0;
+  margin: 0;
+}
 .container {
   max-width: 1880px;
   margin: 0 auto;
@@ -33,21 +40,25 @@ img {
   max-width: 1000px;
   margin: 0 auto;
 }
+html > body > header {
+  position: absolute;
+  top: 48px;
+  width: 100%;
+}
 html > body > header > .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  padding-top: 48px;
 }
-html > body > header > div > span a {
+html > body > header > div > a.contacts-link {
   display: flex;
   align-items: center;
   font-size: 21px;
   font-weight: 400;
   color: #000000;
 }
-html > body > header > div > span a::before {
+html > body > header > div > a.contacts-link::before {
   width: 25px;
   height: 30px;
   margin-right: 10px;
@@ -55,120 +66,112 @@ html > body > header > div > span a::before {
   background-image: url("../img/phone.svg");
   background-repeat: no-repeat;
 }
-html > body > header > div > span a:hover {
+html > body > header > div > a.contacts-link:hover {
   color: #f9572e;
 }
-html > body > main > div {
-  position: relative;
+html > body > main > section.first-screen {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 0 50px 180px 50px;
+  justify-content: space-between;
+  min-width: 100vh;
+  min-height: 100vh;
 }
-html > body > main > div > section {
-  padding-top: 7%;
-  width: 508px;
+html > body > main > section.first-screen > .info-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 7vh;
+  margin-top: 15%;
 }
-html > body > main > div > section h1 {
-  margin-bottom: 27px;
+html > body > main > section.first-screen > .info-wrapper > h1 {
+  margin: 0;
+  margin-bottom: 25px;
   font-size: 64px;
-  font-weight: 500;
+  line-height: 64px;
   letter-spacing: -0.5px;
 }
-html > body > main > div > section p {
+html > body > main > section.first-screen > .info-wrapper > p {
   margin-bottom: 44px;
   font-size: 21px;
-  font-weight: 400;
+  line-height: 30px;
   letter-spacing: -0.01px;
 }
-html > body > main > div > section > a.btn {
+html > body > main > section.first-screen > .info-wrapper > .learn-start {
+  margin-bottom: 20vh;
+}
+html > body > main > section.first-screen > .info-wrapper > .learn-start > a {
   padding-top: 17px;
   padding-right: 28px;
   padding-bottom: 15px;
   padding-left: 31px;
   margin-right: 31px;
-  margin-bottom: 50px;
   font-size: 16px;
   font-weight: 500;
+  line-height: 18px;
   letter-spacing: -0.01px;
   color: #ffff;
   background-color: #f9572e;
   border-radius: 25px;
   box-shadow: 0px 7px 15px rgba(249, 87, 46, 0.6);
 }
-html > body > main > div > section > a.btn:hover {
+html > body > main > section.first-screen > .info-wrapper > .learn-start > a:hover {
   background-color: #ff7b59;
 }
-html > body > main > div > section > span {
-  font-size: 16px;
-  font-weight: 400;
-  color: #666666;
-}
-html > body > main > div > section > a.header-scroll {
+html > body > main > section.first-screen > .info-wrapper > .header-scroll {
   display: flex;
   align-items: center;
   gap: 12px;
-  width: 255px;
-  margin-top: 50%;
   font-size: 16px;
-  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.01px;
   color: #f9572e;
 }
-html > body > main > div > section > a.header-scroll img {
+html > body > main > section.first-screen > .info-wrapper > .header-scroll img {
   transition: 1s;
 }
-html > body > main > div > section > a.header-scroll:hover img {
+html > body > main > section.first-screen > .info-wrapper > .header-scroll:hover img {
   transform: scale(0.9) scaleX(0.8);
 }
-html > body > main > div > section div.header-video {
-  position: absolute;
-  top: -100px;
-  right: 0%;
-  z-index: -1;
-  width: 840px;
-  height: 820px;
-  max-width: 100%;
+html > body > main > section.first-screen > .video-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vh;
+  height: 100vh;
+  margin-top: 20px;
   background-image: url("../img/video.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  html > body > main > div > section div.header-video {
+  html > body > main > section.first-screen > .video-wrapper {
     background-image: url("../img/video@2x.jpg");
   }
 }
-html > body > main > div > section div.header-play {
-  width: 250px;
-  margin-top: -35%;
-  margin-left: 10px;
-  cursor: pointer;
-}
-html > body > main > div > section div.header-play > div.video {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+html > body > main > section.first-screen > .video-wrapper > button {
   width: 255px;
   height: 255px;
+  cursor: pointer;
   background-image: url('../img/oval.svg');
   background-repeat: no-repeat;
+  border: none;
+  background-color: inherit;
 }
-html > body > main > div > section div.header-play > div.video > img {
-  margin-left: 20px;
-}
-html > body > main > div > section div.header-play p {
-  font-size: 21px;
-  font-weight: 400;
-  text-align: center;
-  color: #f9572e;
-}
-html > body > main > div > section div.header-play img {
+html > body > main > section.first-screen > .video-wrapper > button > img {
+  margin-top: 15px;
+  margin-left: 25px;
   transition: 1s;
 }
-html > body > main > div > section div.header-play:hover img {
+html > body > main > section.first-screen > .video-wrapper > button:hover img {
   transform: scale(1.1);
+}
+html > body > main > section.first-screen > .video-wrapper > p {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 21px;
+  line-height: 30px;
+  color: #f9572e;
 }
 html > body > main > article.about-company {
   padding-top: 50px;
