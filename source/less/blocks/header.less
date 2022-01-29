@@ -15,6 +15,13 @@ html > body > header > .container
 	align-items: center;
 
 	padding: 0 50px;
+
+	@media (max-width: 485px)
+	{
+		gap: 20px;
+
+		padding: 0 20px;
+	}
 }
 
 html > body > header > div > a.contacts-link
@@ -26,6 +33,11 @@ html > body > header > div > a.contacts-link
 	font-weight: 400;
 
 	color: @black;
+
+	@media (max-width: 485px)
+	{
+		font-size: 18px;
+	}
 }
 
 html > body > header > div > a.contacts-link::before
