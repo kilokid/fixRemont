@@ -1,5 +1,13 @@
 @import "../variables.less";
 
+html > body > header
+{
+	position: absolute;
+	top: 48px;
+
+	width: 100%;
+}
+
 html > body > header > .container
 {
 	display: flex;
@@ -7,10 +15,9 @@ html > body > header > .container
 	align-items: center;
 
 	padding: 0 50px;
-	padding-top: 48px;
 }
 
-html > body > header > div > span a
+html > body > header > div > a.contacts-link
 {
 	display: flex;
 	align-items: center;
@@ -21,7 +28,7 @@ html > body > header > div > span a
 	color: @black;
 }
 
-html > body > header > div > span a::before
+html > body > header > div > a.contacts-link::before
 {
 	width: 25px;
 	height: 30px;
@@ -33,7 +40,7 @@ html > body > header > div > span a::before
 	background-repeat: no-repeat;
 }
 
-html > body > header > div > span a:hover
+html > body > header > div > a.contacts-link:hover
 {
 	color: @orange;
 }
