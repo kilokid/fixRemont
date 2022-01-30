@@ -53,7 +53,7 @@ html > body > header > .container {
     padding: 0 20px;
   }
 }
-@media (max-width: 378px) {
+@media (max-width: 485px) {
   html > body > header > div > a > img {
     width: 120px;
     height: 50px;
@@ -68,11 +68,6 @@ html > body > header > div > a.contacts-link {
 }
 @media (max-width: 485px) {
   html > body > header > div > a.contacts-link {
-    font-size: 18px;
-  }
-}
-@media (max-width: 378px) {
-  html > body > header > div > a.contacts-link {
     font-size: 16px;
   }
 }
@@ -85,7 +80,7 @@ html > body > header > div > a.contacts-link::before {
   background-repeat: no-repeat;
   background-size: contain;
 }
-@media (max-width: 378px) {
+@media (max-width: 485px) {
   html > body > header > div > a.contacts-link::before {
     width: 20px;
     height: 20px;
@@ -109,7 +104,7 @@ html > body > main > section.first-screen {
     text-align: center;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 396px) {
   html > body > main > section.first-screen {
     padding-top: 80px;
   }
@@ -124,25 +119,14 @@ html > body > main > section.first-screen > .info-wrapper {
 html > body > main > section.first-screen > .info-wrapper > h1 {
   margin: 0;
   margin-bottom: 25px;
-  font-size: 64px;
-  line-height: 64px;
+  font-size: calc(28px + 36 * (100vw / 1880));
+  line-height: calc(38px + 26 * (100vw / 1880));
   letter-spacing: -0.5px;
 }
-@media (max-width: 1065px) {
+@media (max-width: 767px) {
   html > body > main > section.first-screen > .info-wrapper > h1 {
-    font-size: 44px;
-  }
-}
-@media (max-width: 442px) {
-  html > body > main > section.first-screen > .info-wrapper > h1 {
-    font-size: 36px;
-    line-height: 44px;
-  }
-}
-@media (max-width: 376px) {
-  html > body > main > section.first-screen > .info-wrapper > h1 {
-    font-size: 28px;
-    line-height: 38px;
+    font-size: calc(28px + (36 + 36 * 0.7) * ((100vw - 320px) / 1880));
+    line-height: calc(38px + 26 * (100vw / 1880));
   }
 }
 html > body > main > section.first-screen > .info-wrapper > p {
@@ -160,7 +144,12 @@ html > body > main > section.first-screen > .info-wrapper > p {
 html > body > main > section.first-screen > .info-wrapper > .learn-start {
   margin-bottom: 16vw;
 }
-@media (max-width: 1065px) {
+@media (max-width: 1600px) {
+  html > body > main > section.first-screen > .info-wrapper > .learn-start {
+    margin-bottom: 9vw;
+  }
+}
+@media (max-width: 1345px) {
   html > body > main > section.first-screen > .info-wrapper > .learn-start {
     display: flex;
     flex-direction: column;
@@ -168,14 +157,8 @@ html > body > main > section.first-screen > .info-wrapper > .learn-start {
     gap: 15px;
   }
 }
-@media (max-width: 1600px) {
-  html > body > main > section.first-screen > .info-wrapper > .learn-start {
-    margin-bottom: 9vw;
-  }
-}
 @media (max-width: 840px) {
   html > body > main > section.first-screen > .info-wrapper > .learn-start {
-    flex-direction: column;
     align-items: center;
     margin-bottom: 5vw;
     margin-left: 30px;
@@ -188,9 +171,9 @@ html > body > main > section.first-screen > .info-wrapper > .learn-start {
 }
 html > body > main > section.first-screen > .info-wrapper > .learn-start > a {
   padding-top: 17px;
-  padding-right: 28px;
+  padding-right: 20px;
   padding-bottom: 15px;
-  padding-left: 31px;
+  padding-left: 30px;
   margin-right: 31px;
   font-size: 16px;
   font-weight: 500;
@@ -201,9 +184,8 @@ html > body > main > section.first-screen > .info-wrapper > .learn-start > a {
   border-radius: 25px;
   box-shadow: 0px 7px 15px rgba(249, 87, 46, 0.6);
 }
-@media (max-width: 442px) {
+@media (max-width: 930px) {
   html > body > main > section.first-screen > .info-wrapper > .learn-start > a {
-    width: 250px;
     padding-right: 15px;
     padding-left: 15px;
     border-radius: 50px;
@@ -218,7 +200,7 @@ html > body > main > section.first-screen > .info-wrapper > .learn-start > span 
   letter-spacing: -0.01px;
   color: #666666;
 }
-@media (max-width: 1065px) {
+@media (max-width: 1345px) {
   html > body > main > section.first-screen > .info-wrapper > .learn-start > span {
     margin-left: 60px;
   }
@@ -290,7 +272,7 @@ html > body > main > section.first-screen > .video-wrapper > button {
   }
 }
 html > body > main > section.first-screen > .video-wrapper > button > img {
-  margin-top: 15px;
+  margin-top: 5px;
   margin-left: 25px;
   transition: 1s;
 }
