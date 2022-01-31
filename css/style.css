@@ -305,13 +305,9 @@ html > body > main > article.slider > .slider-wrapper > .slider-content .slide-a
 }
 html > body > main > article.subscription {
   padding-top: 30px;
-  padding-right: 20px;
-  padding-bottom: 0;
-  padding-left: 20px;
 }
 html > body > main > article.subscription > div {
   position: relative;
-  padding: 20px;
   margin-bottom: 135px;
   border: 3px solid #63d2c1;
 }
@@ -327,22 +323,7 @@ html > body > main > article.subscription > div > section.form h2 {
   padding: 0 20px;
   font-size: 40px;
   font-weight: 500;
-  line-height: 50px;
-  letter-spacing: -0.2px;
   background-color: #ffff;
-}
-@media (max-width: 815px) {
-  html > body > main > article.subscription > div > section.form h2 {
-    top: -42px;
-    font-size: calc(16px + 16 * (100vw / 1880));
-  }
-}
-@media (max-width: 420px) {
-  html > body > main > article.subscription > div > section.form h2 {
-    top: -40px;
-    padding: 0 5px;
-    font-size: 16px;
-  }
 }
 html > body > main > article.subscription > div > section.form > section.form-content > p.subscription-description {
   display: flex;
@@ -350,17 +331,9 @@ html > body > main > article.subscription > div > section.form > section.form-co
   margin-top: 55px;
   margin-bottom: 50px;
   font-size: 16px;
-  font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.6px;
-}
-@media (max-width: 420px) {
-  html > body > main > article.subscription > div > section.form > section.form-content > p.subscription-description {
-    flex-direction: column;
-    margin-top: 30px;
-    font-size: 14px;
-    text-align: center;
-  }
+  font-weight: 400;
 }
 html > body > main > article.subscription > div > section.form > section.form-content > p.subscription-description::before {
   width: 46px;
@@ -368,32 +341,13 @@ html > body > main > article.subscription > div > section.form > section.form-co
   margin-right: 20px;
   content: "";
   background-image: url("../img/door.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-@media (max-width: 420px) {
-  html > body > main > article.subscription > div > section.form > section.form-content > p.subscription-description::before {
-    margin-bottom: 10px;
-    width: 36px;
-    height: 39px;
-  }
 }
 html > body > main > article.subscription > div > section.form > section.form-content input {
   width: 500px;
   height: 60px;
-  padding: 18px 0px 18px 25px;
+  padding: 18px 0 18px 25px;
   margin-bottom: 35px;
   border: 1px solid #cccccc;
-}
-@media (max-width: 600px) {
-  html > body > main > article.subscription > div > section.form > section.form-content input {
-    width: 300px;
-  }
-}
-@media (max-width: 420px) {
-  html > body > main > article.subscription > div > section.form > section.form-content input {
-    width: 240px;
-  }
 }
 html > body > main > article.subscription > div > section.form > section.form-content {
   display: flex;
@@ -412,12 +366,11 @@ html > body > main > article.subscription > div > section.form > section.form-co
 }
 html > body > main > article.subscription > div > section.form > section.form-content form > .form-item label.form-label {
   position: absolute;
-  top: 35%;
+  top: 40%;
   left: 24px;
   cursor: text;
   font-size: 18px;
   font-weight: 400;
-  line-height: 24px;
   color: #666666;
   transition: 0.5s;
 }
@@ -425,15 +378,9 @@ html > body > main > article.subscription > div > section.form > section.form-co
   border: 1px solid #000000;
   outline: none;
 }
-html > body > main > article.subscription > div > section.form > section.form-content > form > .form-item > input:not(:-moz-placeholder-shown) + label {
-  top: -10px;
-  padding: 0 7px;
-  font-size: 13px;
-  background-color: #ffff;
-}
-html > body > main > article.subscription > div > section.form > section.form-content > form > .form-item > input:not(:placeholder-shown) + label,
-html > body > main > article.subscription > div > section.form > section.form-content > form > .form-item > input:focus + label {
-  top: -10px;
+html > body > main > article.subscription > div > section.form > section.form-content > form > .form-item > input:focus ~ label,
+html > body > main > article.subscription > div > section.form > section.form-content > form > .form-item > input:not(:focus):valid ~ label {
+  top: -5px;
   padding: 0 7px;
   font-size: 13px;
   background-color: #ffff;
@@ -484,26 +431,29 @@ html > body > footer > div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px;
   font-weight: 400;
 }
-html > body > footer > div > article.social {
+html > body > footer > div > .social {
   display: flex;
   gap: 30px;
+  padding: 0;
   margin-top: 70px;
+  list-style-type: none;
 }
-html > body > footer > div > article.social img:hover {
+html > body > footer > div > .social img:hover {
   opacity: 0.8;
   box-shadow: 0px 15px 20px rgba(249, 87, 46, 0.7);
 }
-html > body > footer > div > section.description {
-  width: 440px;
+html > body > footer > div > .description {
+  max-width: 440px;
   text-align: center;
 }
-html > body > footer > div > section.description > p {
+html > body > footer > div > .description > p {
   margin-bottom: 5px;
   font-size: 21px;
 }
-html > body > footer > div > section.description > p:last-child {
+html > body > footer > div > .description > p:last-child {
   margin-bottom: 75px;
   font-size: 16px;
   color: #666666;
@@ -512,6 +462,12 @@ html > body > footer > div > section.contact {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 100px;
+}
+@media (max-width: 945px) {
+  html > body > footer > div > section.contact {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
 }
 html > body > footer > div > section.contact .phone {
   display: flex;
@@ -544,6 +500,7 @@ html > body > footer > div > section.contact .mail {
   color: #000000;
 }
 html > body > footer > div > section.contact .mail > span {
+  padding-bottom: 3px;
   border-bottom: 2px solid #f9572e;
 }
 html > body > footer > div > section.contact .mail:hover {
