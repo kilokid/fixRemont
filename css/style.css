@@ -95,6 +95,7 @@ html > body > main > section.first-screen {
   justify-content: space-between;
   min-width: 100%;
   min-height: 100vh;
+  padding-bottom: 10%;
 }
 @media (max-width: 840px) {
   html > body > main > section.first-screen {
@@ -186,6 +187,14 @@ html > body > main > section.first-screen > .info-wrapper > .learn-start > a {
 }
 @media (max-width: 930px) {
   html > body > main > section.first-screen > .info-wrapper > .learn-start > a {
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 50px;
+  }
+}
+@media (max-width: 426px) {
+  html > body > main > section.first-screen > .info-wrapper > .learn-start > a {
+    width: 250px;
     padding-right: 15px;
     padding-left: 15px;
     border-radius: 50px;
