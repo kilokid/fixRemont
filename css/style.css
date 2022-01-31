@@ -172,62 +172,44 @@ html > body > main > div > section div.header-play img {
 html > body > main > div > section div.header-play:hover img {
   transform: scale(1.1);
 }
-html > body > main > section.about-company {
+html > body > main > article.about-company {
   padding-top: 50px;
   padding-bottom: 100px;
   font-weight: 500;
 }
-@media (max-width: 1080px) {
-  html > body > main > section.about-company {
-    padding-right: 40px;
-    padding-left: 40px;
-  }
+html > body > main > article.about-company h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 40px;
 }
-html > body > main > section.about-company > div > h2 {
-  font-size: calc(36px + 4 * (100vw / 1880));
-  line-height: 50px;
-  letter-spacing: -0.1px;
-}
-@media (max-width: 767px) {
-  html > body > main > section.about-company > div > h2 {
-    font-size: calc(36px + (4 + 4 * 0.7) * ((100vw - 320px) / 1880));
-  }
-}
-html > body > main > section.about-company > div > p {
+html > body > main > article.about-company > div > p {
+  margin: 0;
+  margin-bottom: 60px;
   font-size: 16px;
-  line-height: 24px;
   letter-spacing: 0.62px;
   color: #33b5a3;
 }
-html > body > main > section.about-company > div > ul.about-company-cards {
+html > body > main > article.about-company div.about-company-cards {
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 80px;
        column-gap: 80px;
   row-gap: 100px;
-  padding: 0;
 }
-html > body > main > section.about-company > div > ul.about-company-cards > li {
+html > body > main > article.about-company div.about-company-cards > section {
   width: 450px;
   padding-top: 30px;
-  list-style-type: none;
   border-top: 3px solid #63d2c1;
 }
-html > body > main > section.about-company > div > ul.about-company-cards > li > h3 {
-  margin: 0;
-  margin-bottom: 10px;
+html > body > main > article.about-company div.about-company-cards > section h3 {
   font-size: 24px;
-  line-height: 32px;
-  letter-spacing: -0.05px;
 }
-html > body > main > section.about-company > div > ul.about-company-cards > li > p {
-  margin: 0;
+html > body > main > article.about-company div.about-company-cards > section p {
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
   color: #666666;
 }
-html > body > main > section.about-company > div > ul.about-company-cards > li:last-child {
+html > body > main > article.about-company div.about-company-cards > section:last-child {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -235,15 +217,11 @@ html > body > main > section.about-company > div > ul.about-company-cards > li:l
   padding: 40px 0;
   border: 3px solid #63d2c1;
 }
-html > body > main > section.about-company > div > ul.about-company-cards > li:last-child h3 {
-  font-size: calc(44px + 20 * (100vw / 1880));
+html > body > main > article.about-company div.about-company-cards > section:last-child h3 {
+  margin: 0;
+  font-size: 64px;
 }
-@media (max-width: 767px) {
-  html > body > main > section.about-company > div > ul.about-company-cards > li:last-child h3 {
-    font-size: calc(44px + (20 + 20 * 0.7) * ((100vw - 320px) / 1880));
-  }
-}
-html > body > main > section.about-company > div > ul.about-company-cards > li:last-child p {
+html > body > main > article.about-company div.about-company-cards > section:last-child p {
   margin: 0;
   margin-bottom: 10px;
   font-size: 24px;
@@ -327,9 +305,13 @@ html > body > main > article.slider > .slider-wrapper > .slider-content .slide-a
 }
 html > body > main > article.subscription {
   padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 0;
+  padding-left: 20px;
 }
 html > body > main > article.subscription > div {
   position: relative;
+  padding: 20px;
   margin-bottom: 135px;
   border: 3px solid #63d2c1;
 }
@@ -345,7 +327,22 @@ html > body > main > article.subscription > div > section.form h2 {
   padding: 0 20px;
   font-size: 40px;
   font-weight: 500;
+  line-height: 50px;
+  letter-spacing: -0.2px;
   background-color: #ffff;
+}
+@media (max-width: 815px) {
+  html > body > main > article.subscription > div > section.form h2 {
+    top: -42px;
+    font-size: calc(16px + 16 * (100vw / 1880));
+  }
+}
+@media (max-width: 420px) {
+  html > body > main > article.subscription > div > section.form h2 {
+    top: -40px;
+    padding: 0 5px;
+    font-size: 16px;
+  }
 }
 html > body > main > article.subscription > div > section.form > section.form-content > p.subscription-description {
   display: flex;
@@ -353,9 +350,17 @@ html > body > main > article.subscription > div > section.form > section.form-co
   margin-top: 55px;
   margin-bottom: 50px;
   font-size: 16px;
+  font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.6px;
-  font-weight: 400;
+}
+@media (max-width: 420px) {
+  html > body > main > article.subscription > div > section.form > section.form-content > p.subscription-description {
+    flex-direction: column;
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: center;
+  }
 }
 html > body > main > article.subscription > div > section.form > section.form-content > p.subscription-description::before {
   width: 46px;
@@ -363,13 +368,32 @@ html > body > main > article.subscription > div > section.form > section.form-co
   margin-right: 20px;
   content: "";
   background-image: url("../img/door.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (max-width: 420px) {
+  html > body > main > article.subscription > div > section.form > section.form-content > p.subscription-description::before {
+    margin-bottom: 10px;
+    width: 36px;
+    height: 39px;
+  }
 }
 html > body > main > article.subscription > div > section.form > section.form-content input {
   width: 500px;
   height: 60px;
-  padding: 18px 0 18px 25px;
+  padding: 18px 0px 18px 25px;
   margin-bottom: 35px;
   border: 1px solid #cccccc;
+}
+@media (max-width: 600px) {
+  html > body > main > article.subscription > div > section.form > section.form-content input {
+    width: 300px;
+  }
+}
+@media (max-width: 420px) {
+  html > body > main > article.subscription > div > section.form > section.form-content input {
+    width: 240px;
+  }
 }
 html > body > main > article.subscription > div > section.form > section.form-content {
   display: flex;
@@ -388,11 +412,12 @@ html > body > main > article.subscription > div > section.form > section.form-co
 }
 html > body > main > article.subscription > div > section.form > section.form-content form > .form-item label.form-label {
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 24px;
   cursor: text;
   font-size: 18px;
   font-weight: 400;
+  line-height: 24px;
   color: #666666;
   transition: 0.5s;
 }
@@ -400,9 +425,15 @@ html > body > main > article.subscription > div > section.form > section.form-co
   border: 1px solid #000000;
   outline: none;
 }
-html > body > main > article.subscription > div > section.form > section.form-content > form > .form-item > input:focus ~ label,
-html > body > main > article.subscription > div > section.form > section.form-content > form > .form-item > input:not(:focus):valid ~ label {
-  top: -5px;
+html > body > main > article.subscription > div > section.form > section.form-content > form > .form-item > input:not(:-moz-placeholder-shown) + label {
+  top: -10px;
+  padding: 0 7px;
+  font-size: 13px;
+  background-color: #ffff;
+}
+html > body > main > article.subscription > div > section.form > section.form-content > form > .form-item > input:not(:placeholder-shown) + label,
+html > body > main > article.subscription > div > section.form > section.form-content > form > .form-item > input:focus + label {
+  top: -10px;
   padding: 0 7px;
   font-size: 13px;
   background-color: #ffff;
