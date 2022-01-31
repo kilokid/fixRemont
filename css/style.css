@@ -205,9 +205,14 @@ html > body > main > section.first-screen > .info-wrapper > .learn-start > span 
     margin-left: 60px;
   }
 }
+@media (max-width: 930px) {
+  html > body > main > section.first-screen > .info-wrapper > .learn-start > span {
+    margin-left: 45px;
+  }
+}
 @media (max-width: 840px) {
   html > body > main > section.first-screen > .info-wrapper > .learn-start > span {
-    margin-left: -20px;
+    margin-left: -30px;
   }
 }
 html > body > main > section.first-screen > .info-wrapper > .header-scroll {
