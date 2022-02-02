@@ -227,7 +227,7 @@ html > body > main > article.about-company div.about-company-cards > section:las
   font-size: 24px;
   color: #000000;
 }
-html > body > main > article.slider {
+html > body > main > section.slider {
   position: relative;
   max-width: 1880px;
   width: 100%;
@@ -236,72 +236,118 @@ html > body > main > article.slider {
   margin-bottom: 130px;
   font-weight: 500;
 }
-html > body > main > article.slider > div > h2 {
+@media (max-width: 1040px) {
+  html > body > main > section.slider {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+html > body > main > section.slider > div > h2 {
   margin: 0;
   margin-bottom: 10px;
   font-size: 40px;
 }
-html > body > main > article.slider > div > p {
+html > body > main > section.slider > div > p {
   margin: 0;
   font-size: 16px;
   color: #33b5a3;
 }
-html > body > main > article.slider > .slider-wrapper {
+html > body > main > section.slider > .slider-wrapper {
   overflow: hidden;
-  margin-left: -450px;
+  margin-left: -400px;
   padding-top: 50px;
   font-size: 13px;
   color: #666666;
 }
-html > body > main > article.slider > .slider-wrapper > .slider-content {
+@media (max-width: 880px) {
+  html > body > main > section.slider > .slider-wrapper {
+    margin-left: -100%;
+  }
+}
+@media (max-width: 481px) {
+  html > body > main > section.slider > .slider-wrapper {
+    margin-left: -370px;
+  }
+}
+@media (max-width: 376px) {
+  html > body > main > section.slider > .slider-wrapper {
+    margin-left: -390px;
+  }
+}
+html > body > main > section.slider > .slider-wrapper > .slider-content {
   display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
   transition: 0.4s all;
 }
-html > body > main > article.slider > .slider-wrapper > .slider-content .slide {
+html > body > main > section.slider > .slider-wrapper > .slider-content .slide {
   display: flex;
   max-width: 880px;
+  height: auto;
   opacity: 0.6;
 }
-html > body > main > article.slider > .slider-wrapper > .slider-content .slide > img {
-  width: 700px;
-  height: 500px;
+@media (max-width: 1600px) {
+  html > body > main > section.slider > .slider-wrapper > .slider-content .slide {
+    flex-direction: column;
+    min-width: 350px;
+  }
 }
-html > body > main > article.slider > .slider-wrapper > .slider-content > .slide > p.slide-description {
+html > body > main > section.slider > .slider-wrapper > .slider-content .slide > img {
+  max-width: 100%;
+  width: 700px;
+}
+@media (max-width: 481px) {
+  html > body > main > section.slider > .slider-wrapper > .slider-content .slide > img {
+    width: 320px;
+    height: 250px;
+  }
+}
+html > body > main > section.slider > .slider-wrapper > .slider-content > .slide > p.slide-description {
   display: none;
   margin-top: 0;
   margin-left: 20px;
   width: 145px;
+  height: 60px;
 }
-html > body > main > article.slider > .slider-wrapper > .slider-content > .slide > p.slide-description-active {
+@media (max-width: 1600px) {
+  html > body > main > section.slider > .slider-wrapper > .slider-content > .slide > p.slide-description {
+    margin-top: 20px;
+    margin-left: 40%;
+  }
+}
+html > body > main > section.slider > .slider-wrapper > .slider-content > .slide > p.slide-description-active {
   position: relative;
   display: block;
 }
-html > body > main > article.slider > .slider-wrapper > .slider-arrows {
+html > body > main > section.slider > .slider-wrapper > .slider-arrows {
   position: absolute;
-  right: 32%;
+  transform: translate(1550%, 0%);
   bottom: 0;
   display: flex;
   gap: 32px;
 }
-html > body > main > article.slider > .slider-wrapper > .slider-arrows button {
+@media (max-width: 1600px) {
+  html > body > main > section.slider > .slider-wrapper > .slider-arrows {
+    right: 50%;
+    transform: translate(50%, -50%);
+    bottom: -80px;
+  }
+}
+html > body > main > section.slider > .slider-wrapper > .slider-arrows button {
   cursor: pointer;
   background-color: inherit;
   border: none;
   transition: 0.5s all;
 }
-html > body > main > article.slider > .slider-wrapper > .slider-arrows button:hover {
+html > body > main > section.slider > .slider-wrapper > .slider-arrows button:hover {
   transform: scale(0.9) scaleY(0.8);
 }
-html > body > main > article.slider > .slider-wrapper > .slider-content .slide-active {
+html > body > main > section.slider > .slider-wrapper > .slider-content .slide-active {
   position: relative;
-  margin-right: 70px;
-  margin-left: -40px;
+  margin-right: 7%;
+  margin-left: 4%;
   opacity: 1;
-}
-@media (max-width: 1879px) {
-  html > body > main > article.slider > .slider-wrapper > .slider-arrows {
-    right: 17%;
-  }
 }
 html > body > main > article.subscription {
   padding-top: 30px;
@@ -431,29 +477,26 @@ html > body > footer > div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 20px;
   font-weight: 400;
 }
-html > body > footer > div > .social {
+html > body > footer > div > article.social {
   display: flex;
   gap: 30px;
-  padding: 0;
   margin-top: 70px;
-  list-style-type: none;
 }
-html > body > footer > div > .social img:hover {
+html > body > footer > div > article.social img:hover {
   opacity: 0.8;
   box-shadow: 0px 15px 20px rgba(249, 87, 46, 0.7);
 }
-html > body > footer > div > .description {
-  max-width: 440px;
+html > body > footer > div > section.description {
+  width: 440px;
   text-align: center;
 }
-html > body > footer > div > .description > p {
+html > body > footer > div > section.description > p {
   margin-bottom: 5px;
   font-size: 21px;
 }
-html > body > footer > div > .description > p:last-child {
+html > body > footer > div > section.description > p:last-child {
   margin-bottom: 75px;
   font-size: 16px;
   color: #666666;
@@ -462,12 +505,6 @@ html > body > footer > div > section.contact {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 100px;
-}
-@media (max-width: 945px) {
-  html > body > footer > div > section.contact {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
 }
 html > body > footer > div > section.contact .phone {
   display: flex;
@@ -500,7 +537,6 @@ html > body > footer > div > section.contact .mail {
   color: #000000;
 }
 html > body > footer > div > section.contact .mail > span {
-  padding-bottom: 3px;
   border-bottom: 2px solid #f9572e;
 }
 html > body > footer > div > section.contact .mail:hover {
