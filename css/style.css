@@ -259,21 +259,6 @@ html > body > main > section.slider > .slider-wrapper {
   font-size: 13px;
   color: #666666;
 }
-@media (max-width: 880px) {
-  html > body > main > section.slider > .slider-wrapper {
-    margin-left: -100%;
-  }
-}
-@media (max-width: 481px) {
-  html > body > main > section.slider > .slider-wrapper {
-    margin-left: -370px;
-  }
-}
-@media (max-width: 376px) {
-  html > body > main > section.slider > .slider-wrapper {
-    margin-left: -390px;
-  }
-}
 html > body > main > section.slider > .slider-wrapper > .slider-content {
   display: flex;
   padding: 0;
@@ -284,18 +269,24 @@ html > body > main > section.slider > .slider-wrapper > .slider-content {
 html > body > main > section.slider > .slider-wrapper > .slider-content .slide {
   display: flex;
   max-width: 880px;
-  height: auto;
+  min-width: 320px;
+  height: 100%;
   opacity: 0.6;
 }
-@media (max-width: 1600px) {
+@media (max-width: 1200px) {
   html > body > main > section.slider > .slider-wrapper > .slider-content .slide {
     flex-direction: column;
-    min-width: 350px;
   }
 }
 html > body > main > section.slider > .slider-wrapper > .slider-content .slide > img {
   max-width: 100%;
   width: 700px;
+  height: 500px;
+}
+@media (max-width: 1070px) {
+  html > body > main > section.slider > .slider-wrapper > .slider-content .slide > img {
+    height: 350px;
+  }
 }
 @media (max-width: 481px) {
   html > body > main > section.slider > .slider-wrapper > .slider-content .slide > img {
@@ -310,10 +301,27 @@ html > body > main > section.slider > .slider-wrapper > .slider-content > .slide
   width: 145px;
   height: 60px;
 }
-@media (max-width: 1600px) {
+@media (max-width: 1200px) {
   html > body > main > section.slider > .slider-wrapper > .slider-content > .slide > p.slide-description {
+    width: 100%;
     margin-top: 20px;
-    margin-left: 40%;
+    margin-left: -20px;
+    text-align: center;
+  }
+}
+@media (max-width: 560px) {
+  html > body > main > section.slider > .slider-wrapper > .slider-content > .slide > p.slide-description {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 480px) {
+  html > body > main > section.slider > .slider-wrapper > .slider-content > .slide > p.slide-description {
+    margin-left: -10px;
+  }
+}
+@media (max-width: 376px) {
+  html > body > main > section.slider > .slider-wrapper > .slider-content > .slide > p.slide-description {
+    margin-left: -25px;
   }
 }
 html > body > main > section.slider > .slider-wrapper > .slider-content > .slide > p.slide-description-active {
@@ -324,13 +332,14 @@ html > body > main > section.slider > .slider-wrapper > .slider-arrows {
   position: absolute;
   transform: translate(1550%, 0%);
   bottom: 0;
+  z-index: 2;
   display: flex;
   gap: 32px;
 }
-@media (max-width: 1600px) {
+@media (max-width: 1200px) {
   html > body > main > section.slider > .slider-wrapper > .slider-arrows {
-    right: 50%;
     transform: translate(50%, -50%);
+    right: 50%;
     bottom: -80px;
   }
 }
@@ -348,6 +357,11 @@ html > body > main > section.slider > .slider-wrapper > .slider-content .slide-a
   margin-right: 7%;
   margin-left: 4%;
   opacity: 1;
+}
+@media (max-width: 1200px) {
+  html > body > main > section.slider > .slider-wrapper > .slider-content .slide-active {
+    margin-left: 7%;
+  }
 }
 html > body > main > article.subscription {
   padding-top: 30px;
