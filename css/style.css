@@ -312,6 +312,7 @@ html > body > main > section.slider > .slider-wrapper > .slider-content > .slide
   html > body > main > section.slider > .slider-wrapper > .slider-content > .slide > p.slide-description {
     width: 100%;
     margin: 20px auto 0 auto;
+    padding: 0 20px;
     text-align: center;
   }
 }
@@ -340,7 +341,6 @@ html > body > main > section.slider > .slider-wrapper > .slider-arrows {
   html > body > main > section.slider > .slider-wrapper > .slider-arrows {
     top: 63%;
     bottom: 50%;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
   }
