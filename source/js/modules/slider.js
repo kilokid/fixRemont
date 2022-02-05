@@ -14,17 +14,17 @@ export const slider = () =>
 	{
 		if ( document.body.clientWidth <= 1200 )
 		{
-			slidesField.style.width = 100 * slides.length + '%';
+			slidesField.style.width = `${100 * slides.length}%`;
 
 			slidesField.style.transform = `translateX(-${slide.getBoundingClientRect().width}px)`;
 		}
 		else
 		{
-			slidesField.style.width = 50 * slides.length + '%';
+			slidesField.style.width = `${50 * slides.length}%`;
 		}
 	}
 
-	slidesTransform();
+	slidesFieldTransform();
 
 	const debounce = ( func, time = 100 ) =>
 	{
