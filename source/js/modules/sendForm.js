@@ -1,11 +1,11 @@
 export const sendForm = () =>
 {
 	const form = document.querySelector('.form-content');
-	const succesfuly = document.querySelector('.successfuly');
-	const inputEmail = document.querySelector('input[type="email"]');
-	const emailLabel = document.querySelector('.email');
-	const inputName = document.querySelector('input[name="name"]');
-	const subscrBtn = document.getElementById('btn-submit');
+	const succesfuly = form.querySelector('.successfuly');
+	const inputEmail = form.querySelector('input[type="email"]');
+	const emailLabel = form.querySelector('.email');
+	const inputName = form.querySelector('input[name="name"]');
+	const subscrBtn = form.querySelector('.btn-submit');
 
 	const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
 
