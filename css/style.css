@@ -14,10 +14,11 @@
 ::before,
 ::after {
   box-sizing: border-box;
-}
-body {
   margin: 0;
   padding: 0;
+}
+body {
+  height: auto;
   font-family: "Muller", "Work sans", sans-serif;
 }
 a {
@@ -35,181 +36,341 @@ img {
   max-width: 1000px;
   margin: 0 auto;
 }
+html > body > header {
+  position: absolute;
+  top: 48px;
+  width: 100%;
+}
 html > body > header > .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  padding-top: 48px;
 }
-html > body > header > div > span a {
+@media (max-width: 485px) {
+  html > body > header > .container {
+    gap: 20px;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 485px) {
+  html > body > header > div > a > img {
+    width: 120px;
+    height: 50px;
+  }
+}
+html > body > header > div > a.contacts-link {
   display: flex;
   align-items: center;
   font-size: 21px;
   font-weight: 400;
   color: #000000;
 }
-html > body > header > div > span a::before {
+@media (max-width: 485px) {
+  html > body > header > div > a.contacts-link {
+    font-size: 16px;
+  }
+}
+html > body > header > div > a.contacts-link::before {
   width: 25px;
   height: 30px;
   margin-right: 10px;
   content: "";
   background-image: url("../img/phone.svg");
   background-repeat: no-repeat;
+  background-size: contain;
 }
-html > body > header > div > span a:hover {
+@media (max-width: 485px) {
+  html > body > header > div > a.contacts-link::before {
+    width: 20px;
+    height: 20px;
+  }
+}
+html > body > header > div > a.contacts-link:hover {
   color: #f9572e;
 }
-html > body > main > div {
-  position: relative;
+html > body > main > section.first-screen {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 0 50px 180px 50px;
+  justify-content: space-between;
+  min-width: 100%;
+  min-height: 100vh;
+  padding-bottom: 10%;
 }
-html > body > main > div > section {
-  padding-top: 7%;
-  width: 508px;
+@media (max-width: 840px) {
+  html > body > main > section.first-screen {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 50px;
+    text-align: center;
+  }
 }
-html > body > main > div > section h1 {
-  margin-bottom: 27px;
-  font-size: 64px;
+@media (max-width: 396px) {
+  html > body > main > section.first-screen {
+    padding-top: 80px;
+  }
+}
+html > body > main > section.first-screen > .info-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 7vh;
+  margin-top: 15%;
+  margin-right: 50px;
+}
+html > body > main > section.first-screen > .info-wrapper > h1 {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: calc(28px + 36 * (100vw / 1880));
   font-weight: 500;
+  line-height: calc(38px + 26 * (100vw / 1880));
   letter-spacing: -0.5px;
 }
-html > body > main > div > section p {
+@media (max-width: 767px) {
+  html > body > main > section.first-screen > .info-wrapper > h1 {
+    font-size: calc(28px + (36 + 36 * 0.7) * ((100vw - 320px) / 1880));
+    line-height: calc(38px + 26 * (100vw / 1880));
+  }
+}
+html > body > main > section.first-screen > .info-wrapper > p {
   margin-bottom: 44px;
   font-size: 21px;
   font-weight: 400;
+  line-height: 30px;
   letter-spacing: -0.01px;
 }
-html > body > main > div > section > a.btn {
+@media (max-width: 442px) {
+  html > body > main > section.first-screen > .info-wrapper > p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+html > body > main > section.first-screen > .info-wrapper > .learn-start {
+  margin-bottom: 16vw;
+}
+@media (max-width: 1600px) {
+  html > body > main > section.first-screen > .info-wrapper > .learn-start {
+    margin-bottom: 9vw;
+  }
+}
+@media (max-width: 1345px) {
+  html > body > main > section.first-screen > .info-wrapper > .learn-start {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+  }
+}
+@media (max-width: 840px) {
+  html > body > main > section.first-screen > .info-wrapper > .learn-start {
+    align-items: center;
+    margin-bottom: 5vw;
+    margin-left: 30px;
+  }
+}
+@media (max-width: 442px) {
+  html > body > main > section.first-screen > .info-wrapper > .learn-start {
+    margin-left: 30px;
+  }
+}
+html > body > main > section.first-screen > .info-wrapper > .learn-start > a {
   padding-top: 17px;
-  padding-right: 28px;
+  padding-right: 20px;
   padding-bottom: 15px;
-  padding-left: 31px;
+  padding-left: 30px;
   margin-right: 31px;
-  margin-bottom: 50px;
   font-size: 16px;
   font-weight: 500;
+  line-height: 18px;
   letter-spacing: -0.01px;
   color: #ffff;
   background-color: #f9572e;
   border-radius: 25px;
   box-shadow: 0px 7px 15px rgba(249, 87, 46, 0.6);
 }
-html > body > main > div > section > a.btn:hover {
+@media (max-width: 930px) {
+  html > body > main > section.first-screen > .info-wrapper > .learn-start > a {
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 50px;
+  }
+}
+@media (max-width: 426px) {
+  html > body > main > section.first-screen > .info-wrapper > .learn-start > a {
+    width: 250px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 50px;
+  }
+}
+html > body > main > section.first-screen > .info-wrapper > .learn-start > a:hover {
   background-color: #ff7b59;
 }
-html > body > main > div > section > span {
+html > body > main > section.first-screen > .info-wrapper > .learn-start > span {
   font-size: 16px;
   font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.01px;
   color: #666666;
 }
-html > body > main > div > section > a.header-scroll {
+@media (max-width: 1345px) {
+  html > body > main > section.first-screen > .info-wrapper > .learn-start > span {
+    margin-left: 60px;
+  }
+}
+@media (max-width: 930px) {
+  html > body > main > section.first-screen > .info-wrapper > .learn-start > span {
+    margin-left: 45px;
+  }
+}
+@media (max-width: 840px) {
+  html > body > main > section.first-screen > .info-wrapper > .learn-start > span {
+    margin-left: -30px;
+  }
+}
+html > body > main > section.first-screen > .info-wrapper > .header-scroll {
   display: flex;
   align-items: center;
   gap: 12px;
-  width: 255px;
-  margin-top: 50%;
   font-size: 16px;
   font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.01px;
   color: #f9572e;
 }
-html > body > main > div > section > a.header-scroll img {
+@media (max-width: 840px) {
+  html > body > main > section.first-screen > .info-wrapper > .header-scroll {
+    display: none;
+  }
+}
+html > body > main > section.first-screen > .info-wrapper > .header-scroll img {
   transition: 1s;
 }
-html > body > main > div > section > a.header-scroll:hover img {
+html > body > main > section.first-screen > .info-wrapper > .header-scroll:hover img {
   transform: scale(0.9) scaleX(0.8);
 }
-html > body > main > div > section div.header-video {
-  position: absolute;
-  top: -100px;
-  right: 0%;
-  z-index: -1;
-  width: 840px;
-  height: 820px;
-  max-width: 100%;
+html > body > main > section.first-screen > .video-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vh;
+  height: 100vh;
+  margin-top: 20px;
   background-image: url("../img/video.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  html > body > main > div > section div.header-video {
+  html > body > main > section.first-screen > .video-wrapper {
     background-image: url("../img/video@2x.jpg");
   }
 }
-html > body > main > div > section div.header-play {
-  width: 250px;
-  margin-top: -35%;
-  margin-left: 10px;
-  cursor: pointer;
+@media (max-width: 840px) {
+  html > body > main > section.first-screen > .video-wrapper {
+    width: 90%;
+    height: 350px;
+    margin-top: 0;
+  }
 }
-html > body > main > div > section div.header-play > div.video {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+html > body > main > section.first-screen > .video-wrapper > button {
   width: 255px;
   height: 255px;
+  cursor: pointer;
   background-image: url('../img/oval.svg');
   background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: inherit;
 }
-html > body > main > div > section div.header-play > div.video > img {
-  margin-left: 20px;
+@media (max-width: 800px) {
+  html > body > main > section.first-screen > .video-wrapper > button {
+    width: 165px;
+    height: 165px;
+  }
 }
-html > body > main > div > section div.header-play p {
-  font-size: 21px;
-  font-weight: 400;
-  text-align: center;
-  color: #f9572e;
-}
-html > body > main > div > section div.header-play img {
+html > body > main > section.first-screen > .video-wrapper > button > img {
+  margin-top: 5px;
+  margin-left: 25px;
   transition: 1s;
 }
-html > body > main > div > section div.header-play:hover img {
+@media (max-width: 800px) {
+  html > body > main > section.first-screen > .video-wrapper > button > img {
+    width: 100px;
+    height: 100px;
+  }
+}
+html > body > main > section.first-screen > .video-wrapper > button:hover img {
   transform: scale(1.1);
 }
-html > body > main > article.about-company {
+html > body > main > section.first-screen > .video-wrapper > p {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #f9572e;
+}
+html > body > main > section.about-company {
   padding-top: 50px;
   padding-bottom: 100px;
   font-weight: 500;
 }
-html > body > main > article.about-company h2 {
-  margin: 0;
-  margin-bottom: 10px;
-  font-size: 40px;
+@media (max-width: 1080px) {
+  html > body > main > section.about-company {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
 }
-html > body > main > article.about-company > div > p {
+html > body > main > section.about-company > div > h2 {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: calc(36px + 4 * (100vw / 1880));
+  line-height: 50px;
+  letter-spacing: -0.1px;
+}
+@media (max-width: 767px) {
+  html > body > main > section.about-company > div > h2 {
+    font-size: calc(36px + (4 + 4 * 0.7) * ((100vw - 320px) / 1880));
+  }
+}
+html > body > main > section.about-company > div > p {
   margin: 0;
   margin-bottom: 60px;
   font-size: 16px;
+  line-height: 24px;
   letter-spacing: 0.62px;
   color: #33b5a3;
 }
-html > body > main > article.about-company div.about-company-cards {
+html > body > main > section.about-company > div > ul.about-company-cards {
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 80px;
        column-gap: 80px;
   row-gap: 100px;
+  padding: 0;
 }
-html > body > main > article.about-company div.about-company-cards > section {
+html > body > main > section.about-company > div > ul.about-company-cards > li {
   width: 450px;
   padding-top: 30px;
+  list-style-type: none;
   border-top: 3px solid #63d2c1;
 }
-html > body > main > article.about-company div.about-company-cards > section h3 {
+html > body > main > section.about-company > div > ul.about-company-cards > li > h3 {
+  margin: 0;
+  margin-bottom: 10px;
   font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.05px;
 }
-html > body > main > article.about-company div.about-company-cards > section p {
+html > body > main > section.about-company > div > ul.about-company-cards > li > p {
+  margin: 0;
   font-size: 16px;
   font-weight: 400;
+  line-height: 24px;
   color: #666666;
 }
-html > body > main > article.about-company div.about-company-cards > section:last-child {
+html > body > main > section.about-company > div > ul.about-company-cards > li:last-child {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -217,13 +378,17 @@ html > body > main > article.about-company div.about-company-cards > section:las
   padding: 40px 0;
   border: 3px solid #63d2c1;
 }
-html > body > main > article.about-company div.about-company-cards > section:last-child h3 {
-  margin: 0;
-  font-size: 64px;
+html > body > main > section.about-company > div > ul.about-company-cards > li:last-child h3 {
+  font-size: calc(44px + 20 * (100vw / 1880));
 }
-html > body > main > article.about-company div.about-company-cards > section:last-child p {
+@media (max-width: 767px) {
+  html > body > main > section.about-company > div > ul.about-company-cards > li:last-child h3 {
+    font-size: calc(44px + (20 + 20 * 0.7) * ((100vw - 320px) / 1880));
+  }
+}
+html > body > main > section.about-company > div > ul.about-company-cards > li:last-child p {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 24px;
   color: #000000;
 }
@@ -366,9 +531,19 @@ html > body > main > section.slider > .slider-wrapper > .slider-content .slide-a
 }
 html > body > main > article.subscription {
   padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 0;
+  padding-left: 20px;
+}
+@media (max-width: 420px) {
+  html > body > main > article.subscription {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 html > body > main > article.subscription > div {
   position: relative;
+  padding: 20px;
   margin-bottom: 135px;
   border: 3px solid #63d2c1;
 }
@@ -384,7 +559,22 @@ html > body > main > article.subscription > div > section.form h2 {
   padding: 0 20px;
   font-size: 40px;
   font-weight: 500;
+  line-height: 50px;
+  letter-spacing: -0.2px;
   background-color: #ffff;
+}
+@media (max-width: 815px) {
+  html > body > main > article.subscription > div > section.form h2 {
+    top: -42px;
+    font-size: calc(16px + 16 * (100vw / 1880));
+  }
+}
+@media (max-width: 420px) {
+  html > body > main > article.subscription > div > section.form h2 {
+    top: -40px;
+    padding: 0 5px;
+    font-size: 16px;
+  }
 }
 html > body > main > article.subscription > div > section.form > section.form-content > p.subscription-description {
   display: flex;
@@ -392,9 +582,17 @@ html > body > main > article.subscription > div > section.form > section.form-co
   margin-top: 55px;
   margin-bottom: 50px;
   font-size: 16px;
+  font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.6px;
-  font-weight: 400;
+}
+@media (max-width: 420px) {
+  html > body > main > article.subscription > div > section.form > section.form-content > p.subscription-description {
+    flex-direction: column;
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: center;
+  }
 }
 html > body > main > article.subscription > div > section.form > section.form-content > p.subscription-description::before {
   width: 46px;
@@ -402,13 +600,32 @@ html > body > main > article.subscription > div > section.form > section.form-co
   margin-right: 20px;
   content: "";
   background-image: url("../img/door.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (max-width: 420px) {
+  html > body > main > article.subscription > div > section.form > section.form-content > p.subscription-description::before {
+    margin-bottom: 10px;
+    width: 36px;
+    height: 39px;
+  }
 }
 html > body > main > article.subscription > div > section.form > section.form-content input {
   width: 500px;
   height: 60px;
-  padding: 18px 0 18px 25px;
+  padding: 18px 0px 18px 25px;
   margin-bottom: 35px;
   border: 1px solid #cccccc;
+}
+@media (max-width: 600px) {
+  html > body > main > article.subscription > div > section.form > section.form-content input {
+    width: 300px;
+  }
+}
+@media (max-width: 420px) {
+  html > body > main > article.subscription > div > section.form > section.form-content input {
+    width: 240px;
+  }
 }
 html > body > main > article.subscription > div > section.form > section.form-content {
   display: flex;
@@ -427,11 +644,12 @@ html > body > main > article.subscription > div > section.form > section.form-co
 }
 html > body > main > article.subscription > div > section.form > section.form-content form > .form-item label.form-label {
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 24px;
   cursor: text;
   font-size: 18px;
   font-weight: 400;
+  line-height: 24px;
   color: #666666;
   transition: 0.5s;
 }
@@ -439,9 +657,15 @@ html > body > main > article.subscription > div > section.form > section.form-co
   border: 1px solid #000000;
   outline: none;
 }
-html > body > main > article.subscription > div > section.form > section.form-content > form > .form-item > input:focus ~ label,
-html > body > main > article.subscription > div > section.form > section.form-content > form > .form-item > input:not(:focus):valid ~ label {
-  top: -5px;
+html > body > main > article.subscription > div > section.form > section.form-content > form > .form-item > input:not(:-moz-placeholder-shown) + label {
+  top: -10px;
+  padding: 0 7px;
+  font-size: 13px;
+  background-color: #ffff;
+}
+html > body > main > article.subscription > div > section.form > section.form-content > form > .form-item > input:not(:placeholder-shown) + label,
+html > body > main > article.subscription > div > section.form > section.form-content > form > .form-item > input:focus + label {
+  top: -10px;
   padding: 0 7px;
   font-size: 13px;
   background-color: #ffff;
@@ -485,6 +709,12 @@ html > body > main > article.subscription > div > section > section.successfuly 
   padding: 150px 250px;
   text-align: center;
 }
+html > body > main > article.subscription > div > section.form > section.form-content input.input-error {
+  border-color: #f9572e;
+}
+html > body > main > article.subscription > div > section.form > section.form-content form > .form-item label.label-error {
+  color: #f9572e;
+}
 html > body > footer {
   background-color: #f2f2f2;
 }
@@ -492,26 +722,29 @@ html > body > footer > div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px;
   font-weight: 400;
 }
-html > body > footer > div > article.social {
+html > body > footer > div > .social {
   display: flex;
   gap: 30px;
+  padding: 0;
   margin-top: 70px;
+  list-style-type: none;
 }
-html > body > footer > div > article.social img:hover {
+html > body > footer > div > .social img:hover {
   opacity: 0.8;
   box-shadow: 0px 15px 20px rgba(249, 87, 46, 0.7);
 }
-html > body > footer > div > section.description {
-  width: 440px;
+html > body > footer > div > .description {
+  max-width: 440px;
   text-align: center;
 }
-html > body > footer > div > section.description > p {
+html > body > footer > div > .description > p {
   margin-bottom: 5px;
   font-size: 21px;
 }
-html > body > footer > div > section.description > p:last-child {
+html > body > footer > div > .description > p:last-child {
   margin-bottom: 75px;
   font-size: 16px;
   color: #666666;
@@ -520,6 +753,12 @@ html > body > footer > div > section.contact {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 100px;
+}
+@media (max-width: 945px) {
+  html > body > footer > div > section.contact {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
 }
 html > body > footer > div > section.contact .phone {
   display: flex;
@@ -552,6 +791,7 @@ html > body > footer > div > section.contact .mail {
   color: #000000;
 }
 html > body > footer > div > section.contact .mail > span {
+  padding-bottom: 3px;
   border-bottom: 2px solid #f9572e;
 }
 html > body > footer > div > section.contact .mail:hover {
