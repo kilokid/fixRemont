@@ -487,7 +487,7 @@ html > body > main > section.slider > .slider-wrapper > .slider-content > .slide
 }
 html > body > main > section.slider > .slider-wrapper > .slider-arrows {
   position: absolute;
-  transform: translateX(1570%);
+  transform: translateX(2070%);
   bottom: 0;
   z-index: 2;
   display: flex;
@@ -555,7 +555,7 @@ html > body > main > article.subscription > div > section.form {
 }
 html > body > main > article.subscription > div > section.form h2 {
   position: absolute;
-  top: -55px;
+  top: -25px;
   padding: 0 20px;
   font-size: 40px;
   font-weight: 500;
@@ -565,13 +565,13 @@ html > body > main > article.subscription > div > section.form h2 {
 }
 @media (max-width: 815px) {
   html > body > main > article.subscription > div > section.form h2 {
-    top: -42px;
+    top: -24px;
     font-size: calc(16px + 16 * (100vw / 1880));
   }
 }
 @media (max-width: 420px) {
   html > body > main > article.subscription > div > section.form h2 {
-    top: -40px;
+    top: -26px;
     padding: 0 5px;
     font-size: 16px;
   }
@@ -729,6 +729,7 @@ html > body > footer > div > .social {
   display: flex;
   gap: 30px;
   padding: 0;
+  padding-bottom: 32px;
   margin-top: 70px;
   list-style-type: none;
 }
@@ -743,10 +744,12 @@ html > body > footer > div > .description {
 html > body > footer > div > .description > p {
   margin-bottom: 5px;
   font-size: 21px;
+  line-height: 26px;
 }
 html > body > footer > div > .description > p:last-child {
   margin-bottom: 75px;
   font-size: 16px;
+  line-height: 24px;
   color: #666666;
 }
 html > body > footer > div > section.contact {
@@ -778,6 +781,7 @@ html > body > footer > div > section.contact .address {
   flex-direction: column;
   align-items: center;
   font-size: 21px;
+  line-height: 20px;
 }
 html > body > footer > div > section.contact .address > span {
   font-size: 16px;
