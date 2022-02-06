@@ -1,5 +1,13 @@
 @import "../variables.less";
 
+html > body > header
+{
+	position: absolute;
+	top: 48px;
+
+	width: 100%;
+}
+
 html > body > header > .container
 {
 	display: flex;
@@ -7,10 +15,25 @@ html > body > header > .container
 	align-items: center;
 
 	padding: 0 50px;
-	padding-top: 48px;
+
+	@media (max-width: 485px)
+	{
+		gap: 20px;
+
+		padding: 0 20px;
+	}
 }
 
-html > body > header > div > span a
+html > body > header > div > a > img
+{
+	@media (max-width: 485px)
+	{
+		width: 120px;
+		height: 50px;
+	}
+}
+
+html > body > header > div > a.contacts-link
 {
 	display: flex;
 	align-items: center;
@@ -19,9 +42,14 @@ html > body > header > div > span a
 	font-weight: 400;
 
 	color: @black;
+
+	@media (max-width: 485px)
+	{
+		font-size: 16px;
+	}
 }
 
-html > body > header > div > span a::before
+html > body > header > div > a.contacts-link::before
 {
 	width: 25px;
 	height: 30px;
@@ -31,9 +59,16 @@ html > body > header > div > span a::before
 
 	background-image: url("../img/phone.svg");
 	background-repeat: no-repeat;
+	background-size: contain;
+
+	@media (max-width: 485px)
+	{
+		width: 20px;
+		height: 20px;
+	}
 }
 
-html > body > header > div > span a:hover
+html > body > header > div > a.contacts-link:hover
 {
 	color: @orange;
 }
