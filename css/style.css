@@ -318,7 +318,9 @@ html > body > main > section.about-company {
 }
 @media (max-width: 1080px) {
   html > body > main > section.about-company {
+    padding-top: 100px;
     padding-right: 40px;
+    padding-bottom: 50px;
     padding-left: 40px;
   }
 }
@@ -405,6 +407,7 @@ html > body > main > section.slider {
   html > body > main > section.slider > div.container-sm {
     padding-right: 20px;
     padding-left: 20px;
+    margin-bottom: 30px;
   }
 }
 html > body > main > section.slider > div > h2 {
@@ -495,7 +498,7 @@ html > body > main > section.slider > .slider-wrapper > .slider-arrows {
 }
 @media (max-width: 1200px) {
   html > body > main > section.slider > .slider-wrapper > .slider-arrows {
-    top: 50%;
+    top: 55%;
     bottom: 50%;
     justify-content: space-between;
     width: 100%;
@@ -504,7 +507,7 @@ html > body > main > section.slider > .slider-wrapper > .slider-arrows {
 }
 @media (max-width: 393px) {
   html > body > main > section.slider > .slider-wrapper > .slider-arrows {
-    top: 63%;
+    top: 67%;
     bottom: 50%;
     align-items: center;
     width: 100%;
@@ -515,6 +518,11 @@ html > body > main > section.slider > .slider-wrapper > .slider-arrows button {
   background-color: inherit;
   border: none;
   transition: 0.5s all ease;
+}
+@media (max-width: 1200px) {
+  html > body > main > section.slider > .slider-wrapper > .slider-arrows button {
+    padding: 20px;
+  }
 }
 html > body > main > section.slider > .slider-wrapper > .slider-arrows button:hover {
   transform: scale(0.9) scaleY(0.8);
@@ -537,6 +545,7 @@ html > body > main > article.subscription {
 }
 @media (max-width: 420px) {
   html > body > main > article.subscription {
+    padding-top: 0;
     padding-right: 15px;
     padding-left: 15px;
   }
