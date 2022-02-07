@@ -2,10 +2,10 @@ export const sendForm = () =>
 {
 	const form = document.querySelector('.form-content');
 	const succesfuly = document.querySelector('.successfuly');
-	const inputEmail = document.querySelector('input[type="email"]');
-	const emailLabel = document.querySelector('.email');
-	const inputName = document.querySelector('input[name="name"]');
-	const subscrBtn = document.getElementById('btn-submit');
+	const inputEmail = form.querySelector('input[type="email"]');
+	const emailLabel = form.querySelector('.email');
+	const inputName = form.querySelector('input[name="name"]');
+	const subscrBtn = form.querySelector('.btn-submit');
 
 	const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
 
@@ -16,27 +16,37 @@ export const sendForm = () =>
 
 	const updateInput = () =>
 	{
-		if ( !validateEmail(inputEmail.value) )
+		if ( !validateEmail( inputEmail?.value ) )
 		{
-			inputEmail.style.borderColor = '#F9572E';
-			emailLabel.style.color = '#F9572E';
+			inputEmail.classList.add('input-error');
+			emailLabel.classList.add('label-error');
 		}
 		else {
-			inputEmail.style.borderColor = '#666666';
-			emailLabel.style.color = '#666666';
+			inputEmail.classList.remove('input-error');
+			emailLabel.classList.remove('label-error');
 		}
 	}
 
-	inputEmail.addEventListener( 'input', updateInput );
-
-	subscrBtn.addEventListener('click', ( event ) =>
+	subscrBtn?.addEventListener('click', ( event ) =>
 		{
 			event.preventDefault();
 
-			if ( inputEmail.value === '' || inputName.value === '' )
+			if ( inputEmail?.value === '' && inputName?.value === '' )
 			{
-				inputEmail.style.borderColor = '#F9572E';
-				inputName.style.borderColor = '#F9572E';
+				inputEmail.classList.add('input-error');
+				inputName.classList.add('input-error');
+				return;
+			}
+			else if ( inputEmail?.value === '' || !validateEmail( inputEmail?.value ) )
+			{
+				inputEmail.classList.add('input-error');
+				inputName.classList.remove('input-error');
+				return;
+			}
+			else if ( inputName?.value === '' )
+			{
+				inputName.classList.add('input-error');
+				inputEmail.classList.remove('input-error');
 				return;
 			}
 
@@ -45,6 +55,8 @@ export const sendForm = () =>
 		}
 	);
 
+	inputEmail?.addEventListener( 'input', updateInput );
+
 	document.addEventListener( 'input', ( event ) =>
 		{
 			const target = event.target;
@@ -52,11 +64,11 @@ export const sendForm = () =>
 			if ( target.closest('#form-name') || target.placeholder === 'Имя и фамилия*' )
 			{
 				target.value = target.value.replace(/[^а-яё ]+$/gi, '');
-				target.style.borderColor = '#666666';
+				target.classList.remove('input-error');
 			}
 			else if ( target.value === '' )
 			{
-				target.style.borderColor = '#F9572E';
+				target.classList.add('input-error');
 			}
 
 			if ( target.closest('#form-email') || target.placeholder === 'E-mail адрес*' )

@@ -23,86 +23,83 @@
 			<a href="#">
 				<img src="./img/logo.svg" alt="Fix Ремонт">
 			</a>
-			<span>
-				<a href="#contacts">
-					Контакты
-				</a>
-			</span>
+			<a class="contacts-link" href="#contacts">
+				Контакты
+			</a>
 		</div>
 	</header>
 	<main>
-		<div class="container">
-			<section>
+		<section class="first-screen">
+			<div class="info-wrapper">
 				<h1>
 					Ремонт квартир<br/> в типовых домах
 				</h1>
 				<p>
 					Готовый дизайн-проект, работы и материалы<br/> за 3 месяца от 610 т.р.
 				</p>
-				<a class="btn" href="#forms">
-					Узнайте о запуске первым
-				</a>
-				<span>
-					Старт весной 2016
-				</span>
+				<div class="learn-start">
+					<a href="#forms">
+						Узнайте о запуске первым
+					</a>
+					<span>
+						Старт весной 2016
+					</span>
+				</div>
 				<a class="header-scroll" href="#second">
 					<img src="./img/arrows-bottom.svg" alt="Кнопка: 'Пролистать ниже'">
 					Листайте вниз,<br/> чтобы ничего не упустить
 				</a>
-			</section>
-			<section>
-				<div class="header-video"></div>
-				<div class="header-play">
-					<div class="video">
-						<img src="./img/play.svg" alt="">
-					</div>
-					<p>
-						Смотреть видео
-					</p>
-				</div>
-			</section>
-		</div>
-		<article id="second" class="about-company">
-			<div class="container-sm">
-				<h2>FIX Ремонт — это легко</h2>
-				<p>Готовые проекты, проверенные материалы и умелые руки</p>
-				<div class="about-company-cards">
-					<section>
-						<h3>
-							Опытная команда
-						</h3>
-						<p>
-							Команда проектировщиков и строителей со стажем работы более 6 лет
-						</p>
-					</section>
-					<section>
-						<h3>
-							Типовые дизайн-проекты
-						</h3>
-						<p>
-							Три стиля чистовой отделки «под ключ» и спектр дополнительных услуг
-						</p>
-					</section>
-					<section>
-						<h3>
-							Фиксированная смета
-						</h3>
-						<p>
-							Никаких дополнительных расходов во время ремонта.<br/>Расчет стоимости при заключении договора
-						</p>
-					</section>
-					<section>
-						<p>
-							Срок работ
-						</p>
-						<h3>
-							3 месяца
-						</h3>
-					</section>
-				</div>
 			</div>
-		</article>
-		<article class="slider">
+			<div class="video-wrapper">
+				<button type="button">
+					<img src="./img/play.svg" alt="">
+				</button>
+				<p>
+					Смотреть видео
+				</p>
+			</div>
+		</section>
+		<section id="second" class="about-company">
+            <div class="container-sm">
+                <h2>FIX Ремонт — это легко</h2>
+                <p>Готовые проекты, проверенные материалы и умелые руки</p>
+                <ul class="about-company-cards">
+                    <li>
+                        <h3>
+                            Опытная команда
+                        </h3>
+                        <p>
+                            Команда проектировщиков и строителей со стажем работы более 6 лет
+                        </p>
+                    </li>
+                    <li>
+                        <h3>
+                            Типовые дизайн-проекты
+                        </h3>
+                        <p>
+                            Три стиля чистовой отделки «под ключ» и спектр дополнительных услуг
+                        </p>
+                    </li>
+                    <li>
+                        <h3>
+                            Фиксированная смета
+                        </h3>
+                        <p>
+                            Никаких дополнительных расходов во время ремонта.<br/>Расчет стоимости при заключении договора
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Срок работ
+                        </p>
+                        <h3>
+                            3 месяца
+                        </h3>
+                    </li>
+                </ul>
+            </div>
+        </section>
+		<section class="slider">
 			<div class="container-sm">
 				<h2>
 					3 стиля интерьера
@@ -112,40 +109,40 @@
 				</p>
 			</div>
 			<div class="slider-wrapper">
-				<div class="slider-content">
-					<div class="slide">
+				<ul class="slider-content">
+					<li class="slide slide-active">
 						<img src="./img/slider-3.jpg" srcset="./img/slider-3@2x.jpg" alt="">
 						<p class="slide-description">
 							Уютная кухня для семейных трапез в классическом стиле
 						</p>
-					</div>
-					<div class="slide">
+					</li>
+					<li class="slide">
 						<img src="./img/slider-1.jpg" srcset="./img/slider-1@2x.jpg" alt="">
 						<p class="slide-description">
 							Кафельная плитка в ванной комнате в скандинавском стиле
 						</p>
-					</div>
-					<div class="slide">
+					</li>
+					<li class="slide">
 						<img src="./img/slider-2.jpg" srcset="./img/slider-2@2x.jpg" alt="">
 						<p class="slide-description">
 							Светлая, просторная гостиная в эко-стиле
 						</p>
-					</div>
-				</div>
+					</li>
+				</ul>
 				<div class="slider-arrows">
-					<button id="btn-prev">
+					<button class="btn-prev">
 						<svg width="24" height="46" viewBox="0 0 24 46" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M22.4443 44.1739L3.10979 24.8394C1.94306 23.6658 1.94306 21.7703 3.10979 20.5967L22.4443 1.26221" stroke="#F9572E" stroke-width="3"/>
 						</svg>
 					</button>
-					<button id="btn-next">
+					<button class="btn-next">
 						<svg width="24" height="46" viewBox="0 0 24 46" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M1.44434 1.26221L20.7789 20.5967C21.9504 21.7683 21.9504 23.6678 20.7789 24.8394L1.44434 44.1739" stroke="#F9572E" stroke-width="3"/>
 						</svg>
 					</button>
 				</div>
 			</div>
-		</article>
+		</section>
 		<article id="forms" class="subscription">
 			<div class="container-sm">
 				<section class="form">
@@ -164,18 +161,18 @@
 						</p>
 						<form>
 							<div class="form-item">
-								<input id="form-name" type="text" name="name" required>
+								<input id="form-name" type="text" name="name" placeholder=" " required>
 								<label class="form-label" for="form-name">Имя и фамилия*</label>
 							</div>
 							<div class="form-item">
-								<input id="form-email" type="email" name="email" required>
+								<input id="form-email" type="email" name="email" placeholder=" " required>
 								<label class="form-label email" for="form-email">E-mail адрес*</label>
 							</div>
 							<div class="form-item">
-								<input id="form-phone" type="tel" name="phone" required>
+								<input id="form-phone" type="tel" name="phone" placeholder=" ">
 								<label class="form-label" for="form-phone">Телефон</label>
 							</div>
-							<button id="btn-submit" type="submit">
+							<button class="btn-submit" type="submit">
 								Подписаться
 							</button>
 						</form>
@@ -192,27 +189,33 @@
 	</main>
 	<footer id="contacts">
 		<div class="container-sm">
-			<article class="social">
-				<a href="#">
-					<img src="./img/facebook.svg" alt="Facebook">
-				</a>
-				<a href="#">
-					<img src="./img/vk.svg" alt="Vkontakte">
-				</a>
-				<a href="#">
-					<img src="./img/instagram.svg" alt="Instagram">
-				</a>
-			</article>
-			<section class="description">
+			<ul class="social">
+				<li>
+					<a href="#">
+						<img src="./img/facebook.svg" alt="Facebook">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./img/vk.svg" alt="Vkontakte">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./img/instagram.svg" alt="Instagram">
+					</a>
+				</li>
+			</ul>
+			<div class="description">
 				<p>
 					Следите за нашим развитием
 				</p>
 				<p>
 					Подпишитесь на наши аккаунты в соц. сетях, знакомьтесь с нашими проектами и тем, что нас вдохновляет
 				</p>
-			</section>
+			</div>
 			<section class="contact">
-				<a class="phone" href="#">
+				<a class="phone" href="tel:+78129035445">
 					+7 (812) 903-54-45
 				</a>
 				<p class="address">
@@ -221,7 +224,7 @@
 						Санкт-Петербург
 					</span>
 				</p>
-				<a class="mail" href="#">
+				<a class="mail" href="mailto:9035445@gmail.com">
 					<span>
 						9035445@gmail.com
 					</span>

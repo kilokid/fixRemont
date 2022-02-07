@@ -4,6 +4,8 @@ import { build } from './gulp/build.js';
 import { server } from './gulp/server.js';
 import { watcher } from './gulp/watcher.js';
 
+export { build };
+
 export default gulp.series(
   build,
   server,
