@@ -16,7 +16,7 @@ export const sendForm = () =>
 
 	const updateInput = () =>
 	{
-		if ( !validateEmail(inputEmail.value) )
+		if ( !validateEmail( inputEmail?.value ) )
 		{
 			inputEmail.classList.add('input-error');
 			emailLabel.classList.add('label-error');
@@ -27,23 +27,23 @@ export const sendForm = () =>
 		}
 	}
 
-	subscrBtn.addEventListener('click', ( event ) =>
+	subscrBtn?.addEventListener('click', ( event ) =>
 		{
 			event.preventDefault();
 
-			if ( inputEmail.value === '' && inputName.value === '' )
+			if ( inputEmail?.value === '' && inputName?.value === '' )
 			{
 				inputEmail.classList.add('input-error');
 				inputName.classList.add('input-error');
 				return;
 			}
-			else if ( inputEmail.value === '' )
+			else if ( inputEmail?.value === '' || !validateEmail( inputEmail?.value ) )
 			{
 				inputEmail.classList.add('input-error');
 				inputName.classList.remove('input-error');
 				return;
 			}
-			else if ( inputName.value === '' )
+			else if ( inputName?.value === '' )
 			{
 				inputName.classList.add('input-error');
 				inputEmail.classList.remove('input-error');
@@ -55,7 +55,7 @@ export const sendForm = () =>
 		}
 	);
 
-	inputEmail.addEventListener( 'input', updateInput );
+	inputEmail?.addEventListener( 'input', updateInput );
 
 	document.addEventListener( 'input', ( event ) =>
 		{

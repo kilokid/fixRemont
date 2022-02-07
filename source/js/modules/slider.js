@@ -44,7 +44,7 @@ export const slider = () =>
 
 	const showSlide = ( i = 1 ) =>
 	{
-		if ( i >= slides.length )
+		if ( i >= slides?.length )
 		{
 			slideIndex = 0;
 			i = slideIndex;
@@ -56,27 +56,27 @@ export const slider = () =>
 		}
 
 
-		slides[i].classList.add('slide-active');
+		slides?.[i].classList.add('slide-active');
 
-		slidesDescription[i].classList.add('slide-description-active');
+		slidesDescription?.[i].classList.add('slide-description-active');
 	}
 
 	const hideSlide = () =>
 	{
-		slides.forEach(slide => slide.classList.remove('slide-active'));
+		slides?.forEach(slide => slide.classList.remove('slide-active'));
 
-		slidesDescription.forEach(descp => descp.classList.remove('slide-description-active'));
+		slidesDescription?.forEach(descp => descp.classList.remove('slide-description-active'));
 	}
 
 	hideSlide();
-	showSlide(slideIndex);
+	showSlide( slideIndex );
 
-	btnNext.addEventListener( 'click', () =>
+	btnNext?.addEventListener( 'click', () =>
 		{
-			const actualSlideWidth = slide.getBoundingClientRect().width;
+			const actualSlideWidth = slide?.getBoundingClientRect().width;
 
 			hideSlide();
-			showSlide(++slideIndex);
+			showSlide( ++slideIndex );
 
 			offset = document.body.clientWidth <= 1200 ?
 				actualSlideWidth * slideIndex * - 1 :
@@ -86,12 +86,12 @@ export const slider = () =>
 		}
 	);
 
-	btnPrev.addEventListener( 'click', () =>
+	btnPrev?.addEventListener( 'click', () =>
 		{
-			const actualSlideWidth = slide.getBoundingClientRect().width;
+			const actualSlideWidth = slide?.getBoundingClientRect().width;
 
 			hideSlide();
-			showSlide(--slideIndex);
+			showSlide( --slideIndex );
 
 			offset = document.body.clientWidth <= 1200 ?
 				actualSlideWidth * slideIndex * - 1 :
