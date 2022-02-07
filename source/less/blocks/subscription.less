@@ -23,6 +23,11 @@ html > body > main > article.subscription > div
 	margin-bottom: 135px;
 
 	border: 3px solid @emerald-green;
+
+	@media (max-width: 1200px)
+	{
+		margin-bottom: 60px;
+	}
 }
 
 html > body > main > article.subscription > div > section.form
@@ -243,7 +248,16 @@ html > body > main > article.subscription > div > section >	section.successfuly
 
 	padding: 150px 250px;
 
+	font-size: 16px;
+	line-height: 24px;
 	text-align: center;
+	letter-spacing: 0.65px;
+	text-align: center;
+
+	@media (max-width: 480px)
+	{
+		padding: 20px 50px;
+	}
 }
 
 html > body > main > article.subscription > div > section.form > section.form-content input.input-error
