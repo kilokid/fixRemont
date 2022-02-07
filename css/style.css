@@ -404,6 +404,11 @@ html > body > main > section.slider {
   font-weight: 500;
 }
 @media (max-width: 1200px) {
+  html > body > main > section.slider {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 1200px) {
   html > body > main > section.slider > div.container-sm {
     padding-right: 20px;
     padding-left: 20px;
@@ -555,6 +560,11 @@ html > body > main > article.subscription > div {
   padding: 20px;
   margin-bottom: 135px;
   border: 3px solid #63d2c1;
+}
+@media (max-width: 1200px) {
+  html > body > main > article.subscription > div {
+    margin-bottom: 60px;
+  }
 }
 html > body > main > article.subscription > div > section.form {
   display: flex;
@@ -716,7 +726,15 @@ html > body > main > article.subscription > div > section > section.successfuly 
   justify-content: center;
   gap: 35px;
   padding: 150px 250px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.65px;
   text-align: center;
+}
+@media (max-width: 480px) {
+  html > body > main > article.subscription > div > section > section.successfuly {
+    padding: 20px 50px;
+  }
 }
 html > body > main > article.subscription > div > section.form > section.form-content input.input-error {
   border-color: #f9572e;
