@@ -7,8 +7,9 @@ html > body > main > section.first-screen
 	justify-content: space-between;
 
 	min-width: 100%;
+	height: 100%;
 	min-height: 100vh;
-	padding-bottom: 10%;
+	margin-bottom: 10%;
 
 	@media (max-width: 840px)
 	{
@@ -31,14 +32,16 @@ html > body > main > section.first-screen > .info-wrapper
 	display: flex;
 	flex-direction: column;
 
+	padding-top: 12%;
+	padding-bottom: 10px;
 	padding-left: 7vh;
-	margin-top: 15%;
 	margin-right: 50px;
 }
 
 html > body > main > section.first-screen > .info-wrapper > h1
 {
 	margin: 0;
+	margin-top: auto;
 	margin-bottom: 25px;
 
 	font-size: calc(28px + 36 * (100vw / 1880));
@@ -168,11 +171,13 @@ html > body > main > section.first-screen > .info-wrapper > .learn-start > span
 	}
 }
 
-html > body > main > section.first-screen > .info-wrapper > .header-scroll
+html > body > main > section.first-screen > .info-wrapper > a.header-scroll
 {
 	display: flex;
 	align-items: center;
 	gap: 12px;
+
+	margin-top: auto;
 
 	font-size: 16px;
 	font-weight: 500;
@@ -205,8 +210,9 @@ html > body > main > section.first-screen > .video-wrapper
 	justify-content: center;
 
 	width: 100vh;
-	height: 100vh;
-	margin-top: 20px;
+	height: calc( 100vh - 20px * 2 );
+	margin-top: auto;
+	margin-bottom: auto;
 
 	background-image: url("../img/video.jpg");
 	@media (min-resolution: 2dppx) {
